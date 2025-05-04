@@ -1,0 +1,3 @@
+[submodule "/src/blog/themes/hugo-texify3"]
+	path = /src/blog/themes/hugo-texify3
+	url = https://github.com/michaelneuper/hugo-texify3
