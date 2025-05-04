@@ -7,7 +7,7 @@ init:
 theme URL:
     podman run --rm -v $(pwd):/src --entrypoint /bin/sh hugo:latest -c \
     "THEME_NAME=\$(basename \$(echo \"{{URL}}\" | sed 's/\.git$//')) && \
-    git clone {{URL}} /src/blog/themes/\$THEME_NAME && \
+    git submodule add {{URL}} /src/blog/themes/\$THEME_NAME && \
     echo \"theme = \\\"\$THEME_NAME\\\"\" >> /src/blog/hugo.toml && \
     echo \"Theme '\$THEME_NAME' installed successfully!\""
 
