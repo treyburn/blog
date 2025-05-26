@@ -62,3 +62,21 @@ just remove-theme hugo-theme-ananke
 This will:
 1. Remove the theme directory from `blog/themes`
 2. Update the `blog/hugo.toml` file to remove the theme reference
+
+### Creating New Content
+
+To create new content for your blog, run:
+
+```bash
+just blog <CONTENT_PATH>
+```
+
+For example, to create a new blog post:
+
+```bash
+just blog my-first-post.md
+```
+
+This will:
+1. Create a new content file at the specified path in the `blog/content` directory
+2. Use the default archetype template to populate the file with frontmatter
