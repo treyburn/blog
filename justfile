@@ -20,5 +20,8 @@ remove-theme THEME_NAME:
 blog CONTENT_PATH:
     podman run --rm -v .:/src -w /src/blog hugo:latest new posts/{{CONTENT_PATH}}
 
+publish:
+    podman run --rm -v .:/src -w /src/blog hugo:latest
+
 debug:
     podman run -ti -v .:/src --entrypoint /bin/sh hugo:latest
