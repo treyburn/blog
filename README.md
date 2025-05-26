@@ -80,3 +80,13 @@ just blog my-first-post.md
 This will:
 1. Create a new content file at the specified path in the `blog/content` directory
 2. Use the default archetype template to populate the file with frontmatter
+
+### Debugging with an Interactive Shell
+
+To get an interactive shell inside the Hugo container for debugging purposes, run:
+
+```bash
+just debug
+```
+
+This will start a container with the current directory mounted and drop you into a shell, allowing you to explore the container environment and run Hugo commands manually.
