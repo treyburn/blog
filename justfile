@@ -18,4 +18,7 @@ remove-theme THEME_NAME:
     echo \"Theme '{{THEME_NAME}}' removed successfully!\""
 
 blog CONTENT_PATH:
-    podman run --rm -v .:/src hugo:latest new content blog/content/posts/{{CONTENT_PATH}}
+    podman run --rm -v .:/src hugo:latest new content /src/blog/content/posts/{{CONTENT_PATH}}
+
+debug:
+    podman run -ti -v .:/src --entrypoint /bin/sh hugo:latest
