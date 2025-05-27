@@ -5,7 +5,7 @@ init:
     podman run --rm -v .:/src hugo:latest new site blog
 
 theme URL:
-    podman run --rm -v ./src --entrypoint /bin/sh hugo:latest -c \
+    podman run --rm -v .:/src --entrypoint /bin/sh hugo:latest -c \
     "THEME_NAME=\$(basename \$(echo \"{{URL}}\" | sed 's/\.git$//')) && \
     git submodule add {{URL}} /src/blog/themes/\$THEME_NAME && \
     echo \"theme = \\\"\$THEME_NAME\\\"\" >> /src/blog/hugo.toml && \
@@ -22,6 +22,9 @@ blog CONTENT_PATH:
 
 publish:
     podman run --rm -v .:/src -w /src/blog hugo:latest
+
+serve:
+    podman run --rm -p 1313:1313 -v .:/src -w /src/blog hugo:latest serve -D --bind=0.0.0.0
 
 debug:
     podman run -ti -v .:/src --entrypoint /bin/sh hugo:latest
