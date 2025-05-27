@@ -1,21 +1,12 @@
-FROM golang:1.24.2-bookworm
+FROM docker.io/golang:1.24.2-alpine
 
 ENV HUGO_VERSION=0.147.1
-ENV DART_SASS_VERSION=1.87.0
 
-# Install PostCSS deps
-RUN apt update
+# Prerequirements
+RUN apk add --update --no-cache gcc musl-dev build-base git
 
-# install Dart-SASS deps
-RUN curl -LJO https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz
-RUN tar -xf dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz
-RUN cp -r dart-sass/* /usr/local/bin
-RUN rm -rf dart-sass*
-
-# install hugo from source
-RUN curl -LJO https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
-RUN apt install -y ./hugo_extended_${HUGO_VERSION}_linux-amd64.deb
-RUN rm hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+# Compile from source
+RUN CGO_ENABLED=1 go install -tags extended,withdeploy github.com/gohugoio/hugo@v${HUGO_VERSION}
 
 WORKDIR /src
 
