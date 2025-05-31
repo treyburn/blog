@@ -17,6 +17,9 @@ remove-theme THEME_NAME:
     sed -i '/theme = \"{{THEME_NAME}}\"/d' /src/blog/hugo.toml && \
     echo \"Theme '{{THEME_NAME}}' removed successfully!\""
 
+clean:
+    podman run --rm -v .:/src -w /src/blog --entrypoint /bin/sh hugo:latest -c "rm -rf ./public"
+
 blog CONTENT_PATH:
     podman run --rm -v .:/src -w /src/blog hugo:latest new posts/{{CONTENT_PATH}}
 
