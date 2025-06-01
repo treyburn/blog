@@ -1,0 +1,30 @@
+{{ define "main" }}
+    <header class="content__header">
+        <h1>
+            {{- if eq .Section "posts" -}}
+                cat ./{{ replace .Title " " "_" | markdownify }}.md;
+            {{- else -}}
+                {{ .Title | markdownify }}
+            {{- end -}}
+        </h1>
+        <blockquote>or: {{ .Description | markdownify }}.</blockquote>
+    </header>
+    <div class="content__body">
+        {{ .Content }}
+    </div>
+    <footer class="content__footer"></footer>
+{{ end }}
+
+{{define "aside" }}
+    {{ if or (.Params.Summary) (.Params.description) }}
+        {{ if .Params.Summary }}<p>{{ .Params.Summary }}</p>
+        {{ else if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
+    {{ end }}
+    {{ if .Params.date }}<p>{{ .Date.Format "2006-01-02" }}</p>{{ end }}
+
+    {{ if and (.Params.toc) (.TableOfContents) }}
+	    <hr>
+	    On this page:
+	    {{ .TableOfContents }}
+    {{ end }}
+{{ end }}

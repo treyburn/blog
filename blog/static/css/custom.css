@@ -1,0 +1,13 @@
+h1:before { content: "$ "; }
+
+h1:before {
+    color: var(--base0B);
+}
+
+:root {
+    --logo: #7c589e;
+}
+
+.date {
+    font-size: 16px;
+}
