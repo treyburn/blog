@@ -1,13 +1,19 @@
 {{ define "main" }}
     <header class="content__header">
         <h1>
+            {{ $title := .Title }}
+            {{ if .Params.displayTitle }}
+                {{ $title = .Params.displayTitle }}
+            {{ end }}
             {{- if eq .Section "posts" -}}
-                cat ./{{ replace .Title " " "_" | markdownify }}.md;
+                cat ./{{ replace $title " " "_" | markdownify }}.md;
             {{- else -}}
-                {{ .Title | markdownify }}
+                {{ $title | markdownify }}
             {{- end -}}
         </h1>
+        {{ if .Description }}
         <blockquote>or: {{ .Description | markdownify }}.</blockquote>
+        {{ end }}
     </header>
     <div class="content__body">
         {{ .Content }}
