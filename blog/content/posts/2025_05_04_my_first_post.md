@@ -158,7 +158,26 @@ i am a little bit suspicious that this will end up being a regrettable choice.
 **cons:**
 - man, they hired freaking [mark anderson](https://www.cloudflare.com/press-releases/2024/cloudflare-appoints-mark-anderson-as-president-of-revenue/).<small><small>[^15]</small></small> this is an incredibly sus choice and is the primary reason that i think i will one day come to regret selecting cloudflare as my host+cdn.
 
-[//]: # TODO(continue this piece of getting pages stood up)
+anyways, setting up the cloudflare process was a breeze. you just create an account, make your repo public, then create a new page pointed at your repo and target branch.
+
+the key bit to remember was to set the following so that urls work correctly:
+```shell
+hugo -b $CF_PAGES_URL
+```
+
+And we're off the races!
+
+... almost. it turns out that there are some kinks to work out with regarding our usage of a git submodule for the risotto theme.<small><small>[^17]</small></small>
+
+first, it seems that cloudlfare needs to use ssh instead of https. makes sense; me too.
+
+```gitexclude
+[submodule "/src/blog/themes/risotto"]
+	path = /src/blog/themes/risotto
+	url = git@github.com/joeroe/risotto.git
+```
+
+voila! ... nope. still not building.
 
 ### dns
 
@@ -191,4 +210,5 @@ so, i'm going to transfer domain ownership for this blog. wish me luck.
 [^13]: that's how you know it's a serious project and won't just be abandonware in a few years. 🙈
 [^14]: yes i picked it because i love italian food, but i stayed for the terminal vibes.
 [^15]: mark anderson was the buffoon that took over as the ceo of alteryx when its founder, dean stoecker, stepped down. dean was kind of a mess, but at least he understood why people loved designer. mark anderson, and the ilk he hired, were clueless trend chasers. he fundamentally did not understand alteryx's value prop. and because of that, he harmed my friends, colleagues, and literal family via wave after wave of needless layoffs due to his ineptitude. and he personally cost me a lot in lost stock value. seriously, fuck that guy. it's so disheartening to see a buffoon like that fail upwards just because he's giga-wealthy. eat the rich.
-[^16]: am i really the only one spending hundreds a year on un-used domains from half-baked ideas? don't judge me.
+[^16]: git submodules; not even once. just say no, kids.
+[^17]: am i really the only one spending hundreds a year on un-used domains from half-baked ideas? don't judge me.
