@@ -4,7 +4,9 @@ description = "this is a warning system test."
 author = "travis reyburn"
 +++
 
-## quotes on my mind
+## on my mind
+
+> hope is punk; pass it on.
 
 > do not let selfish men or greedy interests skin your country of its beauty, its riches or its romance.
 
