@@ -2,12 +2,12 @@
   <header class="content__header">
     <h1>pwd</h1>
   </header>
-  <p>/blog/welcome</p>
+  <p>/travis/mind/welcome</p>
   <h2>latest posts</h2>
   <div class="content__body">
     {{ range first 5 (where .Site.RegularPages "Type" "posts") }}
     <article class="post">
-            <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+      <li><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></li>
     </article>
     {{ end }}
     <p>{{ .Content }}</p>
