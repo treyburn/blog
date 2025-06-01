@@ -5,6 +5,7 @@ displayTitle = "whoami --verbose"
 summary = "a litte bit about yours truly"
 author = "travis reyburn"
 alias = ["about"]
+tags = ["about", "about-me", "bio", "intro"]
 regularPages = false
 +++
 

@@ -7,7 +7,11 @@
   <div class="content__body">
     {{ range first 5 (where .Site.RegularPages "Type" "posts") }}
     <article class="post">
-      <li><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></li>
+      {{ $title := .Title }}
+        {{ if .Params.displayTitle }}
+          {{ $title = .Params.displayTitle }}
+        {{ end }}
+      <li><a href="{{ .Permalink }}">{{ $title | markdownify }}</a></li>
     </article>
     {{ end }}
     <p>{{ .Content }}</p>

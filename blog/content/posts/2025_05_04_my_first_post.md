@@ -6,6 +6,7 @@ description = "the journey of creating my blog"
 author = "travis reyburn"
 summary = "trials and tribulations of getting this thing up and runnin'"
 aliases = ["posts"]
+tags = ["blogging", "ai", "podman", "just", "hugo", "cloudflare", "porkbun"]
 +++
 ## Introduction
 

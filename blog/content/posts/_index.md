@@ -2,5 +2,5 @@
 aliases = ["posts"]
 title = "posts"
 author = "Travis Reyburn"
-description = "my musings, enjoy."
+description = "random musings;\n appologies in advance."
 +++
