@@ -1,15 +1,16 @@
 +++
-title = "whoami"
-description = "a litte bit about yours truly."
+title = "whoami --verbose"
+# description left intentially blank
+summary = "a litte bit about yours truly"
 author = "travis reyburn"
 alias = ["about"]
 regularPages = false
 +++
 
-👋 hey! im travis.
+🤘 hej! im travis.
 
-im an avid outdoorsman, a passionate home-cook, and a child at heart.
+an avid outdoorsman, a passionate home-cook, and a child at heart.
 
-i work as a software engineer and have the joy of building gps and mapping apps for fellow outdoors enthusiasts. mostly i work in golang; building out scalable graph data platforms and apis, and high-performance tile serving.
+i work as a software engineer and have the joy of building gps and mapping apps for fellow outdoors enthusiasts. mostly i work in golang; building out graph data platforms and apis, and high-performance tile serving.
 
 catch me on the trail.
