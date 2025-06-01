@@ -40,7 +40,12 @@ title = "GitHub"
 url = "https://github.com/treyburn/"
 
 [[params.socialLinks]]
-icon = "fa-solid fa-envelope"
+icon = "fa-brands fa-linkedin"
+title = "Linkedin"
+url = "https://www.linkedin.com/in/travis-reyburn"
+
+[[params.socialLinks]]
+icon = "fa-solid fa-paper-plane"
 title = "Email"
 url = "mailto:hey@treyburn.dev"
 
