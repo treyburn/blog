@@ -1,4 +1,77 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = "risotto"
+baseURL = "https://treyburn.dev/"
+languageCode = "en-us"
+defaultContentLanguage = 'en'
+theme = ["risotto"]
+title = "travis' blog"
+author = "Travis Reyburn"
+copyright = "made with ♥️ in boulder, co."
+
+ignoreLogs = ['warning-goldmark-raw-html']
+
+# Automatically add content sections to main menu
+sectionPagesMenu = "main"
+
+[pagination]
+pagerSize = 3
+
+[params]
+noindex = false
+
+[params.theme]
+palette = "tokyo-night-dark"
+
+# Sidebar: about/bio
+[params.about]
+title = "travis reyburn"
+description = "welcome my weedy little garden."
+# unicode/emoji logo:
+logo = "🏕️"
+# or use an image:
+#logo_image = "images/rice.svg"
+
+# Sidebar: social links
+# Available icon sets:
+# * FontAwesome 6 <https://fontawesome.com/> ('fa-brands', 'fa-normal', or 'fa-solid' for brands)
+# * Academicons <https://jpswalsh.github.io/academicons> ('ai ai-')
+
+[[params.socialLinks]]
+icon = "fa-brands fa-github"
+title = "GitHub"
+url = "https://github.com/treyburn/"
+
+[[params.socialLinks]]
+icon = "fa-solid fa-envelope"
+title = "Email"
+url = "mailto:hey@treyburn.dev"
+
+[languages]
+    [languages.en]
+        disabled = false
+        languageCode = 'en'
+        languageName = 'english'
+        weight = 0
+
+[menu]
+    [[menu.main]]
+        identifier = "about"
+        name = "about"
+        url = "/about/"
+        weight = 10
+
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            hardWraps = true
+
+    # Table of contents
+    # Add toc = true to content front matter to enable
+    [markup.tableOfContents]
+        startLevel = 2
+        endLevel   = 3
+        ordered    = true
