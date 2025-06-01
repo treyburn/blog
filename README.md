@@ -74,7 +74,7 @@ just blog <CONTENT_PATH>
 For example, to create a new blog post:
 
 ```bash
-just blog some-new-post.md
+just blog some_new_post.md
 ```
 
 This will:
