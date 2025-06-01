@@ -31,37 +31,33 @@ This will create a new Hugo site in the `blog` directory.
 
 To install a theme from [Hugo Themes](https://themes.gohugo.io/), copy the GitHub repository URL and run:
 
-```bash
-just theme <THEME_URL>
+```shell
+git submodule add <THEME_GIT_URL> blog/themes/<THEME>
+
 ```
 
 For example:
-
-```bash
-just theme https://github.com/theNewDynamic/gohugo-theme-ananke.git
+```shell
+git submodule add https://github.com/joeroe/risotto blog/themes/risotto
 ```
 
 This will:
-1. Clone the theme repository into the `blog/themes` directory
-2. Update the `blog/hugo.toml` file to use the theme
+1. Properly create a git submodule link
+2. Clone the theme repository into the `blog/themes` directory
+
+After that you will need to update the `hugo.toml` file.
+
+Unfortunately, there be dragons if you try to do this in a container. So just leave the git handling to the root os.
 
 ### Removing a Hugo Theme
 
 To remove a previously installed theme, run:
 
 ```bash
-just remove-theme <THEME_NAME>
+git rm blog/theme/<THEME>
 ```
 
-For example:
-
-```bash
-just remove-theme hugo-theme-ananke
-```
-
-This will:
-1. Remove the theme directory from `blog/themes`
-2. Update the `blog/hugo.toml` file to remove the theme reference
+You'll also want to remove any refs from the `hugo.toml`
 
 ### Creating New Content
 
