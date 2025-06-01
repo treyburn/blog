@@ -1,0 +1,21 @@
+{{ define "main" }}
+    <header class="content__header">
+        <h1>ls ./{{ .Title | markdownify }}</h1>
+        <p></p>
+    </header>
+
+    {{ range .Pages }}
+    <article class="post">
+<!--        <header class="post__header">-->
+            <li><span class="date">{{ .Date.Format "2006-01-02" }} | </span><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></li>
+            <p class="post__meta">
+                or: {{ .Description }}
+            </p>
+<!--        </header>-->
+    </article>
+    {{ end }}
+{{ end }}
+
+{{define "aside" }}
+    {{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
+{{ end }}
