@@ -1,5 +1,6 @@
 +++
-title = "whoami --verbose"
+title = "about"
+displayTitle = "whoami --verbose"
 # description left intentially blank
 summary = "a litte bit about yours truly"
 author = "travis reyburn"
