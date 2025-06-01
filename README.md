@@ -47,6 +47,8 @@ This will:
 
 After that you will need to update the `hugo.toml` file.
 
+Unfortunately, there be dragons if you try to do this in a container. So just leave the git handling to the root os.
+
 ### Removing a Hugo Theme
 
 To remove a previously installed theme, run:
