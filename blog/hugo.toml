@@ -24,7 +24,7 @@ palette = "tokyo-night-dark"
 [params.about]
 title = "travis reyburn"
 description = "welcome my weedy little garden plot."
-# unicode/emoji logo:
+# unicode/images logo:
 logo = "🏕️"
 # or use an image:
 #logo_image = "images/rice.svg"
@@ -73,8 +73,12 @@ series = "series"
     [markup.goldmark]
         [markup.goldmark.renderer]
             hardWraps = true
+            unsafe = true
         [markup.goldmark.extensions]
             typographer = false
+            footnote = true
+            emojis = true
+            attribute = true
 
     # Table of contents
     # Add toc = true to content front matter to enable
