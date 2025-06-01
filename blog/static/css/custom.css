@@ -1,13 +1,22 @@
+:root {
+    --logo: #7c589e;
+    text-transform: lowercase; /* no gods no masters */
+}
+
 h1:before { content: "$ "; }
 
 h1:before {
     color: var(--base0B);
 }
 
-:root {
-    --logo: #7c589e;
-}
-
 .date {
     font-size: 16px;
+}
+
+.page__body {
+    min-height: 20rem;
+}
+
+.page__logo-inner:after {
+    content: "] $ cd";
 }
