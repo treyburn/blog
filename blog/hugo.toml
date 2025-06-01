@@ -4,7 +4,7 @@ defaultContentLanguage = 'en'
 theme = ["risotto"]
 title = "travis' blog"
 author = "Travis Reyburn"
-copyright = "made with ♥️ in boulder, co."
+copyright = "made with 🚴 in boulder, co."
 
 ignoreLogs = ['warning-goldmark-raw-html']
 
@@ -23,7 +23,7 @@ palette = "tokyo-night-dark"
 # Sidebar: about/bio
 [params.about]
 title = "travis reyburn"
-description = "welcome my weedy little garden."
+description = "welcome my weedy little garden plot."
 # unicode/emoji logo:
 logo = "🏕️"
 # or use an image:
@@ -68,6 +68,8 @@ series = "series"
     [markup.goldmark]
         [markup.goldmark.renderer]
             hardWraps = true
+        [markup.goldmark.extensions]
+            typographer = false
 
     # Table of contents
     # Add toc = true to content front matter to enable

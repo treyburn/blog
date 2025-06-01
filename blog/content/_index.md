@@ -1,5 +1,5 @@
 +++
-title = "$ pwd"
+title = "home"
 description = "this is a warning system test."
 author = "travis reyburn"
 +++
