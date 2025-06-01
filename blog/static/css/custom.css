@@ -3,6 +3,10 @@
     text-transform: lowercase; /* no gods no masters */
 }
 
+.upper {
+    text-transform: uppercase; /* chaos reigns */
+}
+
 h1:before { content: "$ "; }
 
 h1:before {
