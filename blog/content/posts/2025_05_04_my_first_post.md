@@ -2,7 +2,7 @@
 date = "2025-05-04"
 draft = true
 title = "hola mundo"
-description = "the journey to creating my blog"
+description = "the journey of creating my blog"
 author = "travis reyburn"
 summary = "trials and tribulations of getting this thing up and runnin'"
 aliases = ["posts"]
