@@ -171,7 +171,7 @@ And we're off the races!
 
 first, it seems that cloudlfare needs to use ssh instead of https. makes sense; me too.
 
-```gitexclude
+```text
 [submodule "/src/blog/themes/risotto"]
 	path = /src/blog/themes/risotto
 	url = git@github.com/joeroe/risotto.git
@@ -179,15 +179,22 @@ first, it seems that cloudlfare needs to use ssh instead of https. makes sense; 
 
 voila! ... nope. still not building.
 
+after more digging, it turned out that this was not the case. in fact this was straight up wrong. **shakes fist** @ [stackoverflow](https://stackoverflow.com/a/78291745).
+
+in the end, it was my desire to containerize and script with just which bit me. i did this to myself. 
+
+the git submodule handling was incorrect - so a quick `git rm` and a cleanup of `.git/modules` and then re-creation of the submodule with `git submodule add https://github.com/joeroe/risotto blog/themes/risotto` and we are [deploying](https://github.com/treyburn/blog/pull/10)! 🚨
+
+it's still under a garbage random `https://8b695abe.blog-9zz.pages.dev/` domain. but we are one step closer!
+
 ### dns
 
-```text
-It's not DNS
-There's no way it's DNS
-It was DNS
-```
+> It's not DNS
+> There's no way it's DNS
+> It was DNS
 
-i bought this domain in one of my *this-is-a-great-idea-i-should-buy-the-domain* binges<small><small>[^16]</small></small> because when google domains [was still a thing](https://killedbygoogle.com/). now it's managed by squarespace. i guess they're probably fine? idk, they seem kinda sus and [porkbun](https://porkbun.com/) has branded that just vibes with me too much. the pig **gets** me. 
+
+i bought this domain in one of my *this-is-a-great-idea-i-should-buy-the-domain* binges<small><small>[^16]</small></small> back when google domains [was still a thing](https://killedbygoogle.com/). now it's managed by squarespace. i guess they're probably fine? idk, they seem kinda sus and [porkbun](https://porkbun.com/) has branding that just vibes with me too much. the pig **gets** me. 
 
 so, i'm going to transfer domain ownership for this blog. wish me luck.
 
