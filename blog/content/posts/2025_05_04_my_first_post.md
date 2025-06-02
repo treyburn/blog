@@ -200,7 +200,14 @@ so, i'm going to transfer domain ownership for this blog. wish me luck.
 
 ...
 
-[//]: # TODO(continue this piece of getting pages configured for my custom domain name)
+-- TODO: write up switching cloudflare over to my custom domain via porkbun
+
+## that's a wrap
+so we have it. the journey is complete. 😤
+
+now i've just got a few items on my todo:
+- figure out how to make footnotes render as smaller so that i dont need to do janky shit in my markdown like `<small><small>[^n]</small></small>`
+- figure out what the heck im gonna write about next
 
 [^1]: it's still here; you just need to [look for it](https://blog.kagi.com/small-web) -- these not the sites the ~~jedi~~ google would show you.
 [^2]: for inevitable debugging.
