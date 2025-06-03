@@ -24,3 +24,20 @@ h1:before {
 .page__logo-inner:after {
     content: "] $ cd";
 }
+
+/* make image round and capped at 240px*/
+.about__image {
+    width: 240px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Hide side section on small devices */
+@media (max-width: 45rem) {
+    .page__aside {
+        display: none;
+    }
+    .footer__lang {
+        display: none;
+    }
+}
