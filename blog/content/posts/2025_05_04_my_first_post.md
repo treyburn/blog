@@ -1,13 +1,13 @@
 +++
 date = "2025-05-04"
 draft = true
+author = "travis reyburn"
 title = "hola mundo"
 subtitle = "the journey of creating my blog"
 tagline = "trials and tribulations of getting this thing up and runnin'"
 description = ""
-author = "travis reyburn"
 summary = ""
-aliases = ["posts"]
+aliases = []
 tags = ["blogging", "ai", "podman", "just", "hugo", "cloudflare", "porkbun"]
 +++
 ## why?

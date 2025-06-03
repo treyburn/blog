@@ -1,7 +1,7 @@
 +++
-aliases = ["posts"]
+aliases = []
 title = "posts"
 author = "Travis Reyburn"
-tagline = "random musings;\n appologies in advance."
+tagline = "random musings;\nappologies in advance."
 description = ""
 +++

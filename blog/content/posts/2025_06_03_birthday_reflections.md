@@ -1,15 +1,16 @@
 +++
-date = "2025-06-03" # date of publication
-draft = true # set to false or remove to publish
-title = "birthday reflections" # official title of the post
-displayTitle = "yet another orbit completed" # display title in content
-subtitle = "my quiet sadness for birthdays" # subtitle used for display and content
-tagline = "sorry for the downer;\nenjoy the cake" # note on the sidebar
-description = "" # seo description? unclear of usecase
-summary = "" # seo summary? unclear of usecase
-aliases = [] # unclear what aliases do
-tags = ["personal", "introspective"] # content grouping tags
-keywords = [] # seo keywords - presently unused
+date = "2025-06-03"
+draft = true
+author = "travis reyburn"
+title = "birthday reflections"
+displayTitle = "yet another orbit completed"
+subtitle = "my quiet sadness for birthdays"
+tagline = "sorry for the downer;\nenjoy the cake"
+description = ""
+summary = ""
+aliases = []
+tags = ["personal", "introspective", "depression"]
+keywords = []
 +++
 
 ## on birthdays
