@@ -1,8 +1,8 @@
 +++
 title = "about"
 displayTitle = "whoami --verbose"
-# description left intentially blank
-summary = "a litte bit about yours truly"
+description = "a litte bit about yours truly"
+summary = ""
 author = "travis reyburn"
 alias = ["about"]
 tags = ["about", "about-me", "bio", "intro"]
