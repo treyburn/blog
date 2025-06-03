@@ -14,7 +14,7 @@ tags = ["blogging", "ai", "podman", "just", "hugo", "cloudflare", "porkbun"]
 
 building my own blog is a can i've been kicking down the road for years. 
 
-when the idea first took root, i think it was for misaligned reasons. at the core -- i wasn't interested in blogging, but in building a static site rendering engine. i wasn't as fully engaged at work. my left and right brains were screaming in agony from building overly-complex, buggy crud applications.
+when the idea first took root, i think it was for misaligned reasons. at the core -- i wasn't interested in blogging, but in building a static site rendering engine. i wasn't as fully engaged at work. my left and right brains were screaming in agony from building overly complex, buggy crud applications.
 
 i just wanted to carve dovetails by hand, *not build yet another shed*.
 
@@ -31,7 +31,7 @@ i never said i wouldn't do *some* building. you can have your motorcycle mainten
 
 i've been thinking a lot about the old internet. the old internet was ugly. it was a mess. it was **rad**.
 
-how did we end up in a world where there's really only a handful of sites that get much traffic? where did that old diy/punk ethos go?[^1]
+how did we end up in a world where there are really only a handful of sites that get much traffic? where did that old diy/punk ethos go?[^1]
 
 i blame the zuck. tom let you make your space a mess, and we were all the better for it. a sterile environment kills the creative spirit. it lets the money flow that the grunge once kept dammed away. it was garlic to these vampires.
 
@@ -55,7 +55,7 @@ but before we could get to work -- i had some [yaks to shave](https://www.youtub
 ### os
 my personal computer is windows. it's tragic. but it is what it is when my computer was built for gaming.
 
-i've used wsl in the past. don't listen to the zealots on hn -- it's ok at best. but in my experience its buggy, unstable, has bitten me repeatedly, and frankly i find the idea to be kafka-esque.
+i've used wsl in the past. don't listen to the windows zealots on hn -- it's ok at best. but in my experience its buggy, unstable, and has bitten me repeatedly. frankly, i find the idea to be kafkaesque.
 
 it was time to break free from my shackles; it was time to install linux.
 
@@ -93,7 +93,7 @@ ah but there is a catch -- as it turns out, hugo has a cgo dependency.[^10]
 
 so i did what every "sane" software engineer does when met with a challenge they don't really want to do. i vibe coded it. 😎
 
-as it turns out -- the new [jetbrains coding agent](https://www.jetbrains.com/junie/) is actually pretty incredible! i've tried out [cursor](https://www.cursor.com/en) in the past, but i found that the model flailed a lot and just produced *too much* code for me to keep up with. also i just generally prefer jetbrains ide's to vscode -- and i like the jetbrains ethos.
+as it turns out -- the new [jetbrains coding agent](https://www.jetbrains.com/junie/) is actually pretty incredible! i've tried out [cursor](https://www.cursor.com/en) in the past, but i found that the model flailed a lot and just produced *too much* code for me to keep up with. also, i just generally prefer jetbrains ide's to vscode -- and i like the jetbrains ethos.
 
 unlike cursor, the jetbrains agent is slower, produces much smaller changesets, and prompts me for further instructions when things are unclear. still not worried it's going to take my job, but it's done surprisingly well!
 
@@ -137,7 +137,7 @@ off to the races!
 ### hugo and friends
 as i mentioned previously, i selected hugo as my static site gen tool. it hits all the requirements pretty well and there's zero javascript involved.
 
-well -- thats not entirely true. i actually wasted a few hours because i thought it was true. but themes can and sometimes do pull in javascript. particularly around css compilers. i had a nice theme picked, but ended up wasting the better part of an afternoon battling node and css and alpine linux and hugo dependency resolution in my container.
+well -- that's not entirely true. i actually wasted a few hours because i thought it was true. but themes can and sometimes do pull in javascript. particularly around css compilers. i had a nice theme picked, but ended up wasting the better part of an afternoon battling node and css and alpine linux and hugo dependency resolution in my container.
 
 it was an utter waste of time and further cemented my long smoldering annoyances with the javascript and web ecosystem as a whole.
 
@@ -154,7 +154,7 @@ i am a little bit suspicious that this will end up being a regrettable choice.
 
 **pros:**
 - their [hugo integration](https://developers.cloudflare.com/pages/framework-guides/deploy-a-hugo-site/) looks about as easy as it can get for me.
-- cloudflare does some cool, cutting edge work. maybe i could shoehorn in usage of [cloudflare workers](https://workers.cloudflare.com/) one day for interactive elements like comments?
+- cloudflare does some seriously cool, cutting-edge work. maybe i could shoehorn in usage of [cloudflare workers](https://workers.cloudflare.com/) one day for interactive elements like comments?
 - [1.1.1.1](https://www.cloudflare.com/learning/dns/what-is-1.1.1.1/) is the kind of critical infrastructure that should not be controlled by ad-fueled conglomerates.
 
 **cons:**
@@ -179,9 +179,9 @@ first, it seems that cloudlfare needs to use ssh instead of https. makes sense; 
 	url = git@github.com/joeroe/risotto.git
 ```
 
-voila! ... nope. still not building.
+voilà! ... nope. still not building.
 
-after more digging, it turned out that this was not the case. in fact this was straight up wrong. **shakes fist** @ [stackoverflow](https://stackoverflow.com/a/78291745).
+after more digging, it turned out that this was not the case. in fact, this was straight up wrong. **shakes fist** @ [stackoverflow](https://stackoverflow.com/a/78291745).
 
 in the end, it was my desire to containerize and script with just which bit me. i did this to myself. 
 
@@ -226,4 +226,4 @@ now i've just got a few items on my todo:
 [^14]: yes i picked it because i love italian food, but i stayed for the terminal vibes.
 [^15]: mark anderson was the buffoon that took over as the ceo of alteryx when its founder, dean stoecker, stepped down. dean was kind of a mess, but at least he understood why people loved designer. mark anderson, and the sycophants he hired, were clueless trend chasers. he fundamentally did not understand alteryx's value prop. and because of that, he directly harmed my friends, colleagues, and literal family via wave after wave of needless layoffs due to his ineptitude. he destroyed that company, and he personally cost me a good chunk of my life's savings by wrecking alteryx stock. seriously, fuck that guy. it's so disheartening to see a buffoon like that fail upwards just because he's giga-wealthy. eat the rich.
 [^16]: git submodules; not even once. just say no, kids.
-[^17]: am i really the only one spending hundreds a year on un-used domains from half-baked ideas? don't judge me.
+[^17]: am i really the only one spending hundreds a year on unused domains from half-baked ideas? don't judge me.
