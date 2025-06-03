@@ -1,6 +1,12 @@
 +++
-date = '{{ .Date.Format "2006-01-02" }}'
+date = '{{ dateFormat "2006-01-02" .Date }}'
 draft = true
-displayTitle = '{{ replace .File.ContentBaseName "_" " " | title }}'
-title = '{{ replace .File.ContentBaseName "_" " " | title }}'
+displayTitle = '{{ replace (substr .File.ContentBaseName 11) "_" " " | title }}'
+title = '{{ replace (substr .File.ContentBaseName 11) "_" " " | title }}'
+subtitle = ""
+description = ""
+summary = ""
+aliases = []
+tags = []
+keywords = []
 +++
