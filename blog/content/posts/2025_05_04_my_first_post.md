@@ -2,9 +2,11 @@
 date = "2025-05-04"
 draft = true
 title = "hola mundo"
-description = "the journey of creating my blog"
+subtitle = "the journey of creating my blog"
+tagline = "trials and tribulations of getting this thing up and runnin'"
+description = ""
 author = "travis reyburn"
-summary = "trials and tribulations of getting this thing up and runnin'"
+summary = ""
 aliases = ["posts"]
 tags = ["blogging", "ai", "podman", "just", "hugo", "cloudflare", "porkbun"]
 +++

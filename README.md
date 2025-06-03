@@ -64,13 +64,13 @@ You'll also want to remove any refs from the `hugo.toml`
 To create new content for your blog, run:
 
 ```bash
-just blog <CONTENT_PATH>
+just blog <TITLE>
 ```
 
 For example, to create a new blog post:
 
 ```bash
-just blog some_new_post.md
+just blog "some new post"
 ```
 
 This will:
@@ -86,6 +86,26 @@ just publish
 ```
 
 This will generate your static site in the `blog/public` directory, ready for deployment.
+
+### View the development site
+
+To view the development site with live reload, run:
+
+```shell
+just serve
+```
+
+This will compile and serve your site with drafts included. Site available at: http://localhost:1313/
+
+### Preview the production site
+
+To view what the site will look like in production, run:
+
+```shell
+just preview
+```
+
+This will compile and serve the site as it will appear in production. IE no drafts included. Site available at: http://localhost:1313/
 
 ### Debugging with an Interactive Shell
 

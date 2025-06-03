@@ -12,14 +12,14 @@
             {{ end }}
         <header class="post__header">
             <span class="date">{{ .Date.Format "2006-01-02" }} | </span><a href="{{ .Permalink }}">{{ $title | markdownify }}</a>
-            <p class="post__meta">
-                or: {{ .Description }}
-            </p>
+            {{ if .Params.Subtitle }}
+            <p class="post__meta">or: {{ .Params.Subtitle }}</p>
+            {{ end }}
         </header>
     </article>
     {{ end }}
 {{ end }}
 
 {{define "aside" }}
-    {{ if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
+    {{ if .Params.tagline }}<p>{{ .Params.tagline }}</p>{{ end }}
 {{ end }}

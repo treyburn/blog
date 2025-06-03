@@ -6,13 +6,13 @@
                 {{ $title = .Params.displayTitle }}
             {{ end }}
             {{- if eq .Section "posts" -}}
-                cat ./{{ replace $title " " "_" | markdownify }}.md;
+                cat ./{{ replace $title " " "_" | markdownify }}.md
             {{- else -}}
                 {{ $title | markdownify }}
             {{- end -}}
         </h1>
-        {{ if .Description }}
-        <blockquote>or: {{ .Description | markdownify }}.</blockquote>
+        {{ if .Params.Subtitle }}
+        <blockquote>or: {{ .Params.Subtitle | markdownify }}.</blockquote>
         {{ end }}
     </header>
     <div class="content__body">
@@ -22,9 +22,8 @@
 {{ end }}
 
 {{define "aside" }}
-    {{ if or (.Params.Summary) (.Params.description) }}
-        {{ if .Params.Summary }}<p>{{ .Params.Summary }}</p>
-        {{ else if .Params.description }}<p>{{ .Params.description }}</p>{{ end }}
+    {{ if .Params.tagline }}
+        <p>{{ .Params.tagline }}</p>
     {{ end }}
     {{ if .Params.date }}<p>{{ .Date.Format "2006-01-02" }}</p>{{ end }}
 

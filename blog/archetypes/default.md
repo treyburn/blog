@@ -1,6 +1,13 @@
 +++
-date = '{{ .Date.Format "2006-01-02" }}'
-draft = true
-displayTitle = '{{ replace .File.ContentBaseName "_" " " | title }}'
-title = '{{ replace .File.ContentBaseName "_" " " | title }}'
+date = '{{ dateFormat "2006-01-02" .Date }}' # date of publication
+draft = true # set to false or remove to publish
+title = '{{ replace (substr .File.ContentBaseName 11) "_" " " | title }}' # official title of the post
+displayTitle = '{{ replace (substr .File.ContentBaseName 11) "_" " " | title }}' # display title in content
+subtitle = "" # subtitle used for display and content
+tagline = "" # note on the sidebar
+description = "" # seo description? unclear of usecase
+summary = "" # seo summary? unclear of usecase
+aliases = [] # unclear what aliases do
+tags = [] # content grouping tags
+keywords = [] # seo keywords - presently unused
 +++

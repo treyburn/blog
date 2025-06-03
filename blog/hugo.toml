@@ -6,7 +6,7 @@ title = "travis' blog"
 author = "Travis Reyburn"
 copyright = "made with 🚴 in boulder, co."
 
-# Automatically add content sections to main menu
+# Automatically add content sections to the main menu
 sectionPagesMenu = "main"
 
 [pagination]
