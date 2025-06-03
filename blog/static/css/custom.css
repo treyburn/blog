@@ -3,6 +3,10 @@
     text-transform: lowercase; /* no gods no masters */
 }
 
+.footnote-ref {
+    font-size: 12px;
+}
+
 .upper {
     text-transform: uppercase; /* chaos reigns */
 }
