@@ -1,6 +1,6 @@
 +++
 title = "home"
-tagline = "this is a warning system test."
+tagline = "this is a warning system test"
 author = "travis reyburn"
 +++
 
