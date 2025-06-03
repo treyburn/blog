@@ -115,7 +115,7 @@ WORKDIR /src
 ENTRYPOINT ["hugo"]
 ```
 
-it doesn't look like much. and it's not. but it actually made the file much more simplified after i made it overly complex in chasing down some issues with css compilers.[^11]
+it doesn't look like much. and it's not. but junie actually simplified the file quite a bit after i made it overly complex while chasing down some issues with css compilers.[^11]
 
 an ai that will remove code passes my personal turing test. way to go junie.
 
