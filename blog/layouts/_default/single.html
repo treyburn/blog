@@ -22,8 +22,8 @@
 {{ end }}
 
 {{define "aside" }}
-    {{ if or .Params.description }}
-        <p>{{ .Params.description }}</p>
+    {{ if .Params.tagline }}
+        <p>{{ .Params.tagline }}</p>
     {{ end }}
     {{ if .Params.date }}<p>{{ .Date.Format "2006-01-02" }}</p>{{ end }}
 
