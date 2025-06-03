@@ -9,7 +9,7 @@ tags = ["about", "about-me", "bio", "intro"]
 regularPages = false
 +++
 
-🤘 hej! im travis.
+🤘 hej! i'm travis.
 
 an avid outdoorsman, a passionate home-cook, and a child at heart.
 
