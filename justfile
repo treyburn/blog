@@ -7,8 +7,8 @@ init:
 clean:
     podman run --rm -v .:/src -w /src/blog --entrypoint /bin/sh hugo:latest -c "rm -rf ./public"
 
-blog CONTENT_PATH:
-    podman run --rm -v .:/src -w /src/blog hugo:latest new posts/{{CONTENT_PATH}}
+blog TITLE:
+    podman run --rm -v .:/src -w /src/blog hugo:latest new posts/$(date +%Y_%m_%d)_$(echo "{{TITLE}}" | tr ' ' '_' | tr -d "'\"").md
 
 publish:
     podman run --rm -v .:/src -w /src/blog hugo:latest
