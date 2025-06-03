@@ -4,7 +4,7 @@ defaultContentLanguage = 'en'
 theme = ["risotto"]
 title = "travis' blog"
 author = "Travis Reyburn"
-copyright = "made with 🚴 in boulder, co."
+copyright = "made with 🚴 in boulder, co"
 
 # Automatically add content sections to the main menu
 sectionPagesMenu = "main"
@@ -21,7 +21,7 @@ palette = "tokyo-night-dark"
 # Sidebar: about/bio
 [params.about]
 title = "travis reyburn"
-description = "welcome my weedy little garden plot."
+description = "welcome my weedy little garden plot"
 # unicode logo:
 logo = "🏕️"
 # image logo:
