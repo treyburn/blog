@@ -55,7 +55,7 @@ but before we could get to work -- i had some [yaks to shave](https://www.youtub
 ### os
 my personal computer is windows. it's tragic. but it is what it is when my computer was built for gaming.
 
-i've used wsl in the past. don't listen to the windows zealots on hn -- it's ok at best. but in my experience its buggy, unstable, and has bitten me repeatedly. frankly, i find the idea to be kafkaesque.
+i've used wsl in the past. don't listen to the windows zealots on hn -- it's ok at best. when it works. but in my experience its buggy, unstable, and has bitten me repeatedly. frankly, i find the idea to be kafkaesque.
 
 it was time to break free from my shackles; it was time to install linux.
 
@@ -143,7 +143,7 @@ it was an utter waste of time and further cemented my long smoldering annoyances
 
 to be fair -- i did this to myself.
 
-but in the end i settled on a new theme -- [risotto](https://github.com/joeroe/risotto).[^14] i've since modified it a fair bit to meet my needs and am quite happy thus far. it also served as a pretty excellent example of how to work with hugo to create a simple site. kudos for that.
+but in the end, i settled on a new theme -- [risotto](https://github.com/joeroe/risotto).[^14] i've since modified it a fair bit to meet my needs and am quite happy thus far. it also served as a pretty excellent example of how to work with hugo to create a simple site. kudos for that.
 
 thus, we have arrived at the current station. i won't bore with details on how to use the go templating syntax + html that hugo provides. but i will say that i'm glad i had plenty of previous experience with this from writing plenty of codegen tooling in Go at work. this might have been a bit more of a wild ride otherwise. it's still not totally clear what variables are available and when -- but we'll get there through practice.
 
