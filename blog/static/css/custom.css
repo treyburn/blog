@@ -36,6 +36,10 @@ h1:before {
     border-radius: 50%;
 }
 
+.about__description {
+    font-weight: normal;
+}
+
 /* Hide side section on small devices */
 @media (max-width: 45rem) {
     .page__aside {
