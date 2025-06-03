@@ -64,7 +64,7 @@ i opted to use [pop_os!](https://system76.com/pop/) as my distro. i like the foc
 
 pop_os! feels like the closest a desktop linux distro has gotten to the *it-just-works* experience of macOS.
 
-but first i needed to order a new nvme drive and a usb-c 4.0 thumbdrive.[^3]
+but first i needed to order a new nvme drive and a usb 4.0 thumb drive.[^3]
 
 ...
 
@@ -212,7 +212,7 @@ now i've just got a few items on my todo:
 
 [^1]: it's still here; you just need to [look for it](https://blog.kagi.com/small-web) -- these not the sites the ~~jedi~~ google would show you.
 [^2]: for inevitable debugging.
-[^3]: this was totally necessary and not at all overkill -- but hey my mobo supports it.
+[^3]: this was totally unnecessary and absolute overkill -- but hey my mobo supports it.
 [^4]: sorry pop -- this is you.
 [^5]: it's not vanity; it's *aesthetic*.
 [^6]: <img alt=":cowboy-cry:" src="/images/cowboy-crying.png" width="45"/>
