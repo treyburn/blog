@@ -29,13 +29,13 @@ i never said i wouldn't do *some* building. you can have your motorcycle mainten
 
 i've been thinking a lot about the old internet. the old internet was ugly. it was a mess. it was **rad**.
 
-how did we end up in a world where there's really only ~100 sites that get much traffic? where did that old diy/punk ethos go?<small><small>[^1]</small></small>
+how did we end up in a world where there's really only a handful of sites that get much traffic? where did that old diy/punk ethos go?<small><small>[^1]</small></small>
 
 i blame the zuck. tom let you make your space a mess, and we were all the better for it. a sterile environment kills the creative spirit. it lets the money flow that the grunge once kept dammed away. it was garlic to these vampires.
 
 -- rant over --
 
-i want to build my own blog, relatively from scratch, but i don't like the modern blogging platforms. they're bloated, monetized, and don't respect their readers privacy. i don't want a paywall. i don't want analytics. i just want my site to live in your neighborhoods CDN.
+i want to build my own blog, relatively from scratch, because i don't *like* the modern blogging platforms. they're bloated, monetized, and don't respect their readers. i don't want a paywall. i don't want analytics. i don't crave engagement. i just want my site to live in your neighborhoods CDN. this is my funny sticker on a light-pole.
 
 thus i arrived at my requirements:
 - the site must be static
@@ -53,7 +53,7 @@ but before we could get to work -- i had some [yaks to shave](https://www.youtub
 ### os
 my personal computer is windows. it's tragic. but it is what it is when my computer was built for gaming.
 
-i've used wsl in the past. don't listen to the zealots on hackernews - its ok at best. but in my experience its buggy, unstable, has bitten me repeatedly, and frankly i find the idea to be kafka-esque.
+i've used wsl in the past. don't listen to the zealots on hn -- it's ok at best. but in my experience its buggy, unstable, has bitten me repeatedly, and frankly i find the idea to be kafka-esque.
 
 it was time to break free from my shackles; it was time to install linux.
 
@@ -74,7 +74,7 @@ there was something bugging me. the bootloader. it pained me to have to hold f2 
 
 i needed a bootloader. i had used [grub](https://www.gnu.org/software/grub/) in the past. but man. it's just so ugly. pop_os! also uses systemd. and i wanted something with a pretty ui.<small><small>[^5]</small></small>
 
-so i found [refind](https://www.rodsbooks.com/refind/) and a [relatively minimal theme](https://github.com/2KAbhishek/refind2k) for it. but it was not drama free. boots were **painfully** *sloooow*. so i hacked at the config for at least an hour before finally giving up.
+so i found [refind](https://www.rodsbooks.com/refind/) and a [relatively minimal theme](https://github.com/2KAbhishek/refind2k) for it. but it was not drama free. boots were **painfully** *sloooow*. so i hacked at the config for an afternoon before finally giving up.
 
 the next day, i booted in, and it was lightning fast to load.<small><small>[^6]</small></small> I guess the issue was weirdness with the umpteen-million reboots? idk. whatever. at some point i need to set these configs properly because honestly its *jank*. but it works. maybe i should consider a better [theme](https://github.com/martinmilani/rEFInd-theme-collection) -- surely that will fix the problem.<small><small>[^7]</small></small>
 
@@ -120,13 +120,13 @@ an ai that will remove code passes my personal turing test. way to go junie.
 ### command runner
 ok! we've got linux installed, podman installed, and hugo is containerized!
 
-now we're ready to blog, right? hahaha - no.
+now we're ready to blog, right? hahaha -- no.
 
-i'm not just going to `podman run -ti -v .:/src --entrypoint /bin/sh hugo:latest` and run commands directly. oh no - i need to make sure my commands are easy to remember as i am sharing them with many people.<small><small>[^12]</small></small>
+i'm not just going to `podman run -ti -v .:/src --entrypoint /bin/sh hugo:latest` and run commands directly. oh no -- i need to make sure my commands are easy to remember as i am sharing them with many people.<small><small>[^12]</small></small>
 
-in the past i'd use `make` for such a thing. lately i've been using `docker compose` as a container task runner. this time, however, i think i'm gonna test out a shiny new toy.
+in the past, i'd use `make` for such a thing. lately, i've been using `docker compose` as a container task runner. this time, however, i think i'm gonna test out a shiny new toy.
 
-[just](https://github.com/casey/just) looks to fit the bill for my next-generation personal task runner of choice -- and it's written in rust!<small><small>[^13]</small></small>
+[just](https://github.com/casey/just) looks to fit the bill for my personal next-generation task runner of choice -- and it's written in rust!<small><small>[^13]</small></small>
 
 as it turns out, its documentation and usage across the internet is sufficiently widespread -- so junie had no issue vibe coding a bunch of common commands for me.
 
@@ -158,23 +158,57 @@ i am a little bit suspicious that this will end up being a regrettable choice.
 **cons:**
 - man, they hired freaking [mark anderson](https://www.cloudflare.com/press-releases/2024/cloudflare-appoints-mark-anderson-as-president-of-revenue/).<small><small>[^15]</small></small> this is an incredibly sus choice and is the primary reason that i think i will one day come to regret selecting cloudflare as my host+cdn.
 
-[//]: # TODO(continue this piece of getting pages stood up)
+anyways, setting up the cloudflare process was a breeze. you just create an account, make your repo public, then create a new page pointed at your repo and target branch.
+
+the key bit to remember was to set the following so that urls work correctly:
+```shell
+hugo -b $CF_PAGES_URL
+```
+
+And we're off the races!
+
+... almost. it turns out that there are some kinks to work out with regarding our usage of a git submodule for the risotto theme.<small><small>[^16]</small></small>
+
+first, it seems that cloudlfare needs to use ssh instead of https. makes sense; me too.
+
+```text
+[submodule "/src/blog/themes/risotto"]
+	path = /src/blog/themes/risotto
+	url = git@github.com/joeroe/risotto.git
+```
+
+voila! ... nope. still not building.
+
+after more digging, it turned out that this was not the case. in fact this was straight up wrong. **shakes fist** @ [stackoverflow](https://stackoverflow.com/a/78291745).
+
+in the end, it was my desire to containerize and script with just which bit me. i did this to myself. 
+
+the git submodule handling was incorrect - so a quick `git rm` and a cleanup of `.git/modules` and then re-creation of the submodule with `git submodule add https://github.com/joeroe/risotto blog/themes/risotto` and we are [deploying](https://github.com/treyburn/blog/pull/10)! 🚨
+
+it's still under a garbage random `https://8b695abe.blog-9zz.pages.dev/` domain. but we are one step closer!
 
 ### dns
 
-```text
-It's not DNS
-There's no way it's DNS
-It was DNS
-```
+> It's not DNS
+> There's no way it's DNS
+> It was DNS
 
-i bought this domain in one of my *this-is-a-great-idea-i-should-buy-the-domain* binges<small><small>[^16]</small></small> because when google domains [was still a thing](https://killedbygoogle.com/). now it's managed by squarespace. i guess they're probably fine? idk, they seem kinda sus and [porkbun](https://porkbun.com/) has branded that just vibes with me too much. the pig **gets** me. 
+
+i bought this domain in one of my *this-is-a-great-idea-i-should-buy-the-domain* binges<small><small>[^17]</small></small> back when google domains [was still a thing](https://killedbygoogle.com/). now it's managed by squarespace. i guess they're probably fine? idk, they seem kinda sus and [porkbun](https://porkbun.com/) has branding that just vibes with me too much. the pig **gets** me. 
 
 so, i'm going to transfer domain ownership for this blog. wish me luck.
 
 ...
 
-[//]: # TODO(continue this piece of getting pages configured for my custom domain name)
+-- TODO: write up switching cloudflare over to my custom domain via porkbun
+
+## that's a wrap
+so we have it. the journey is complete. 😤
+
+now i've just got a few items on my todo:
+- figure out how to make footnotes render smaller by default so that i dont need to do janky shit in my markdown like `<small><small>[^n]</small></small>`
+- fix my janky css in mobile
+- figure out what the heck im gonna write about next
 
 [^1]: it's still here; you just need to [look for it](https://blog.kagi.com/small-web) -- these not the sites the ~~jedi~~ google would show you.
 [^2]: for inevitable debugging.
@@ -190,5 +224,6 @@ so, i'm going to transfer domain ownership for this blog. wish me luck.
 [^12]: yes i am those people and man does future me need a lot of hand-holding on how to use tooling.
 [^13]: that's how you know it's a serious project and won't just be abandonware in a few years. 🙈
 [^14]: yes i picked it because i love italian food, but i stayed for the terminal vibes.
-[^15]: mark anderson was the buffoon that took over as the ceo of alteryx when its founder, dean stoecker, stepped down. dean was kind of a mess, but at least he understood why people loved designer. mark anderson, and the ilk he hired, were clueless trend chasers. he fundamentally did not understand alteryx's value prop. and because of that, he harmed my friends, colleagues, and literal family via wave after wave of needless layoffs due to his ineptitude. and he personally cost me a lot in lost stock value. seriously, fuck that guy. it's so disheartening to see a buffoon like that fail upwards just because he's giga-wealthy. eat the rich.
-[^16]: am i really the only one spending hundreds a year on un-used domains from half-baked ideas? don't judge me.
+[^15]: mark anderson was the buffoon that took over as the ceo of alteryx when its founder, dean stoecker, stepped down. dean was kind of a mess, but at least he understood why people loved designer. mark anderson, and the sycophants he hired, were clueless trend chasers. he fundamentally did not understand alteryx's value prop. and because of that, he harmed my friends, colleagues, and literal family via wave after wave of needless layoffs due to his ineptitude. he destroyed that company, and he personally cost me a lot in lost stock value. seriously, fuck that guy. it's so disheartening to see a buffoon like that fail upwards just because he's giga-wealthy. eat the rich.
+[^16]: git submodules; not even once. just say no, kids.
+[^17]: am i really the only one spending hundreds a year on un-used domains from half-baked ideas? don't judge me.
