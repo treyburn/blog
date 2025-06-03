@@ -22,10 +22,10 @@ palette = "tokyo-night-dark"
 [params.about]
 title = "travis reyburn"
 description = "welcome my weedy little garden plot."
-# unicode/images logo:
+# unicode logo:
 logo = "🏕️"
-# or use an image:
-#logo_image = "images/rice.svg"
+# image logo:
+logo_image = "images/self.jpg"
 
 # Sidebar: social links
 # Available icon sets:
