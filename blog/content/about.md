@@ -1,7 +1,8 @@
 +++
 title = "about"
 displayTitle = "whoami --verbose"
-description = "a litte bit about yours truly"
+tagline = "a litte bit about yours truly"
+description = ""
 summary = ""
 author = "travis reyburn"
 alias = ["about"]
