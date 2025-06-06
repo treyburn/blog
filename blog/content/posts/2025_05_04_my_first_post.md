@@ -209,6 +209,10 @@ so, i'm going to transfer domain ownership for this blog. wish me luck.
 so we have it. the journey is complete. 😤
 
 now i've just got a few items on my todo:
+- ~fix my janking css styling on mobile~
+- ~figure out how to make my footnote refs small so i dont have to pollute my markdown with `<small><small>[^n]</small></small>`~
+- improve my styling around multi-line quotes
+- css animations?! welcome to my nightmare.
 - figure out what the heck i'm gonna write about next
 
 [^1]: it's still here; you just need to [look for it](https://blog.kagi.com/small-web) -- these not the sites the ~~jedi~~ google would show you.
