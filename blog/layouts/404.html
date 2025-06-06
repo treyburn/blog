@@ -1,9 +1,9 @@
 {{ define "main" }}
     <header class="content__header">
-        <h1>cat /dev/null</h1>
+        <h1>cat .{{ .RelPermalink }} > /dev/null</h1>
     </header>
 {{ end }}
 
 {{define "aside" }}
-    <p>what are you poking around for anyways?</p>
+    <p>what are you poking around for, anyway?</p>
 {{ end }}
