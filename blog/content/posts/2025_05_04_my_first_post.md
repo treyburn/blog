@@ -59,10 +59,10 @@ i've used wsl in the past. don't listen to the windows zealots on hn -- it's ok 
 
 it was time to break free from my shackles; it was time to install linux.
 
-#### pop_os!
-i opted to use [pop_os!](https://system76.com/pop/) as my distro. i like the focus on devex, out-of-the-box support for nvidia gpus, taking the best parts of ubuntu with a better core component update schedule, the [snazzy tiling engine](https://system76.com/pop/workflow/), and i wanted to support the [brave new world](https://system76.com/cosmic/).
+#### pop!_os
+i opted to use [pop!_os](https://system76.com/pop/) as my distro. i like the focus on devex, out-of-the-box support for nvidia gpus, taking the best parts of ubuntu with a better core component update schedule, the [snazzy tiling engine](https://system76.com/pop/workflow/), and i wanted to support the [brave new world](https://system76.com/cosmic/).
 
-pop_os! feels like the closest a desktop linux distro has gotten to the *it-just-works* experience of macOS.
+pop!_os feels like the closest a desktop linux distro has gotten to the *it-just-works* experience of macOS.
 
 but first i needed to order a new nvme drive and a usb 4.0 thumb drive.[^3]
 
@@ -74,14 +74,15 @@ but.
 
 there was something bugging me. the bootloader. it pained me to have to hold f2 every time i wanted to boot into my secondary os.[^4]
 
-i needed a bootloader. i had used [grub](https://www.gnu.org/software/grub/) in the past. but man. it's just so ugly. pop_os! also uses systemd. and i wanted something with a pretty ui.[^5]
+#### bootloader customization
+i needed a bootloader. i had used [grub](https://www.gnu.org/software/grub/) in the past. but man. it's just so ugly. pop!_os also uses systemd. and i wanted something with a pretty ui.[^5]
 
 so i found [refind](https://www.rodsbooks.com/refind/) and a [relatively minimal theme](https://github.com/2KAbhishek/refind2k) for it. but it was not drama free. boots were **painfully** *sloooow*. so i hacked at the config for an afternoon before finally giving up.
 
 the next day, i booted in, and it was lightning fast to load.[^6] I guess the issue was weirdness with the umpteen-million reboots? idk. whatever. at some point i need to set these configs properly because honestly its *jank*. but it works. maybe i should consider a better [theme](https://github.com/martinmilani/rEFInd-theme-collection) -- surely that will fix the problem.[^7]
 
 ### containers
-ok - so we've installed a new nvme drive, installed pop_os!, and dealt with our bootloader compulsions. we're ready to blog!
+ok - so we've installed a new nvme drive, installed pop!_os, and dealt with our bootloader compulsions. we're ready to blog!
 
 *not so fast.*
 
