@@ -210,7 +210,7 @@ cloudflare's instructions were almost sufficient? for whatever reason they ask y
 
 whatever - all we needed to do was delete the dnssec record and swap to cloudflares nameservers, then wait an hour.
 
-once that was done, i just needed to point the cname record for the cloudflare pages to my site in cloudflare. i also need to create a cname record so that `www.treyburn.dev` would resolve to `treyburn.dev` - but we'll get to that later.
+once that was done, i just needed to point the cname record for the cloudflare pages to my site in cloudflare. i also need to create a cname record so that `www.treyburn.dev` would resolve to `treyburn.dev` -- but we'll get to that later.
 
 after that -- I just needed to re-enable dnssec with cloudflare, then disable access to the `*.pages.dev` url.[^18]
 
