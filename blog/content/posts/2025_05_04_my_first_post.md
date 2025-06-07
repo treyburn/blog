@@ -1,6 +1,6 @@
 +++
 date = "2025-05-04"
-draft = true
+draft = false
 author = "travis reyburn"
 title = "hola mundo"
 subtitle = "the journey of creating my blog"
@@ -201,9 +201,21 @@ i bought this domain in one of my *this-is-a-great-idea-i-should-buy-the-domain*
 
 so, i'm going to transfer domain ownership for this blog. wish me luck.
 
-...
+... *an eternity later* ...
 
--- TODO: write up switching cloudflare over to my custom domain via porkbun
+alright well, apparently it took a full week to transfer my domain to porkbun.
+
+now to configure dns on cloudflare. surely this will be straightforward and easy, right? 🙉
+
+cloudflare's instructions were almost sufficient? for whatever reason they ask you to disable dnssec with your registrar -- but they linked to the porkbun docs for setting up dnssec?
+
+whatever - all we needed to do was delete the dnssec record and swap to cloudflares nameservers, then wait an hour.
+
+once that was done, i just needed to point the cname record for the cloudflare pages to my site in cloudflare. i also needed to create a cname record so that `[www.treyburn.dev](https://www.treyburn.dev)` would resolve to `[treyburn.dev](https://treyburn.dev)`.
+
+after that -- I just needed to re-enable dnssec with cloudflare, then disable access to the `*.pages.dev` url.[^18]
+
+and with that -- we are live! [treyburn.dev](https://treyburn.dev)
 
 ## that's a wrap
 so we have it. the journey is complete. 😤
@@ -232,3 +244,4 @@ now i've just got a few items on my todo:
 [^15]: mark anderson was the buffoon that took over as the ceo of alteryx when its founder, dean stoecker, stepped down. dean was kind of a mess, but at least he understood why people loved designer. mark anderson, and the sycophants he hired, were clueless trend chasers. he fundamentally did not understand alteryx's value prop. and because of that, he directly harmed my friends, colleagues, and literal family via wave after wave of needless layoffs due to his ineptitude. he destroyed that company, and he personally cost me a good chunk of my life's savings by wrecking alteryx stock. seriously, fuck that guy. it's so disheartening to see a buffoon like that fail upwards just because he's giga-wealthy. eat the rich.
 [^16]: git submodules; not even once. just say no, kids.
 [^17]: am i really the only one spending hundreds a year on unused domains from half-baked ideas? don't judge me.
+[^18]: don't actually do this. i got into cloudflare hell from this. but we escaped - it just took money 🫠
