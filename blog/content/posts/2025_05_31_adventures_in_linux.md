@@ -1,6 +1,5 @@
 +++
 date = '2025-05-31'
-draft = true
 author = "travis reyburn"
 title = "how to repair pop!_os after nvidia-driver-570 black screen"
 displayTitle = "rock foundations and paper homes"
@@ -22,11 +21,11 @@ why do i need to care about glibc and musl?[^3]
 
 ## when things go wrong
 
-the other day i tried to update my nvidia graphics. it was there in the pop!_shop -- listed under available updates: `nvidia-driver-570`.
+the other day i tried to update my nvidia graphics driver. it was there in the pop!_shop -- listed under available updates: `nvidia-driver-570`.
 
-it had this seductive little `install` button next to it. how could i not click? why *wouldn't* i want the latest and greatest driver? i do this *all the time* in windows.
+it had this seductive little `install` button next to it. how could i not click? why *wouldn't* i want the **latest** and **greatest** driver? i do this *all the time* in windows.
 
-so i did what every doey-eyed fresh-linux-user does -- i smashed that install button and sat back to bask in my linux smugness.
+so i did what every doe-eyed, wet-behind-the-ears, fresh-linux-user does -- i smashed that install button and sat back to bask in my big-brained-linux-smugness.
 
 and then my screen went black. and it never came back.
 
