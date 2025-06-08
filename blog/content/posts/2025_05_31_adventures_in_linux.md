@@ -25,7 +25,7 @@ the other day i tried to update my nvidia graphics driver. it was there in the p
 
 it had this seductive little `install` button next to it. how could i not click? why *wouldn't* i want the **latest** and **greatest** driver? i do this *all the time* in windows.
 
-so i did what every doe-eyed, wet-behind-the-ears, fresh-linux-user does -- i smashed that install button and sat back to bask in my big-brained-linux-smugness.
+so i did what every doe-eyed, wet-behind-the-ears, fresh-faced linux user does -- i smashed that install button and sat back to bask in my big-brained linux smugness.
 
 and then my screen went black. and it never came back.
 
