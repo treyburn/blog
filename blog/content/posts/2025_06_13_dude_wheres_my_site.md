@@ -1,6 +1,5 @@
 +++
 date = '2025-06-13' # date of publication
-draft = true # set to false or remove to publish
 author = 'travis reyburn'
 title = 'Dude Wheres My Site' # official title of the post
 displayTitle = 'Dude Wheres My Site' # display title in content
