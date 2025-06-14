@@ -15,6 +15,9 @@ pagerSize = 3
 [params]
 noindex = false
 
+[params.language]
+defaultContentLanguageName = 'english'
+
 [params.theme]
 palette = "tokyo-night-dark"
 
