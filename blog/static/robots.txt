@@ -1,0 +1,189 @@
+#     .-.     robots, beware;
+#   .'   `.   there are ghosts
+#   :g g   :  in this machine.
+#   : o    `.
+#  :         ``.
+# :             `.
+#:  :         .   `.
+#:   :          ` . `.
+# `.. :            `. ``;
+#    `:;             `:'
+#       :              `.
+#        `.              `.     .
+#          `'`'`'`---..,___`;.-'
+#
+#    ______
+#   /     /\        but if you
+#  /     /  \       are nice,
+# /_____/----\_
+#                 )
+#                .(
+#  you may      /%/\
+#  stay for    (%(%))
+#  a s'more.  .-'..`-.
+#             `-'.'`-'
+
+# search engine indexing is ok
+User-agent: *
+Allow: /
+Sitemap: https://treyburn.dev/sitemap.xml
+
+# Cloudflare Managed Robots.txt to block AI related bots.
+User-agent: AI2Bot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: amazon-kendra
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Applebot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: AwarioRssBot
+Disallow: /
+
+User-agent: AwarioSmartBot
+Disallow: /
+
+User-agent: Brightbot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: DuckAssistBot
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: FriendlyCrawler
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: iaskspider/2.0
+Disallow: /
+
+User-agent: ICC-Crawler
+Disallow: /
+
+User-agent: img2dataset
+Disallow: /
+
+User-agent: Kangaroo Bot
+Disallow: /
+
+User-agent: LinerBot
+Disallow: /
+
+User-agent: MachineLearningForPeaceBot
+Disallow: /
+
+User-agent: Meltwater
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: meta-externalfetcher
+Disallow: /
+
+User-agent: Nicecrawler
+Disallow: /
+
+User-agent: OAI-SearchBot
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+User-agent: omgilibot
+Disallow: /
+
+User-agent: PanguBot
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Perplexity-User
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: PiplBot
+Disallow: /
+
+User-agent: QualifiedBot
+Disallow: /
+
+User-agent: Scoop.it
+Disallow: /
+
+User-agent: Seekr
+Disallow: /
+
+User-agent: SemrushBot-OCOB
+Disallow: /
+
+User-agent: Sidetrade indexer bot
+Disallow: /
+
+User-agent: Timpibot
+Disallow: /
+
+User-agent: VelenPublicWebCrawler
+Disallow: /
+
+User-agent: Webzio-Extended
+Disallow: /
+
+User-agent: YouBot
+Disallow: /
+
+#        |_|_|
+#      \_|||;;_/
+#     \d||%||%:b/
+#    \d~|dO%|i::b/
+#  ._H||dSf|||%::H_.
+#  ._H@|dLF|}|;::H_.
+#  ._H||dXFt||;.:H_.
+#  ._?|{|P|||/;:.P_.
+#   ._Hy||t|||;:H_.
+#   ._?|x||T|;i:P_.
+#    ._H||i||;:H_.
+#    ._H|"|||;:H_.
+# .=================.
+# |;;|#H#|;;;;;;;;: |
+# .=================.
+#  |;|#H#|;;;;;;;: |
+#   |;|#H#|;;;;;: |
+#   |;|#H#|;;;;;: |
+#    |;|#H#|;;;: |
+#    |;|#H#|;;;: |
+#     |;|#H#|;: |
+#      =========
+# our tree is a cactus.
