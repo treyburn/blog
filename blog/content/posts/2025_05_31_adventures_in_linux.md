@@ -5,11 +5,11 @@ title = "how to repair pop!_os after nvidia-driver-570 black screen"
 displayTitle = "rock foundations and paper homes"
 subtitle = "the duality of linux"
 tagline = "adventures in being a desktop linux operator"
-description = ""
+description = "how to repair the linux distro pop!_os after nvidia-driver-570 installation causes black screen"
 summary = ""
 aliases = []
 tags = []
-keywords = ["personal", "introspective", "depression"]
+keywords = ["pop!_os", "nvidia-driver-570", "black screen", "linux"]
 +++
 ## a beginner's thoughts on linux
 
