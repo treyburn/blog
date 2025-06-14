@@ -1,0 +1,68 @@
+{{ if eq .Section "posts" }}
+<script type="application/ld+json">
+{{ $author := .Params.author | default .Site.Author }}
+{{ $description := .Params.description | default .Params.Summary }}
+{{ $publisher := dict "name" .Site.Title "@type" "Organization" }}
+{{ if .Site.Params.about.logo_image }}
+  {{ $logo := dict "@type" "ImageObject" "url" (.Site.Params.about.logo_image | absURL) }}
+  {{ $publisher = merge $publisher (dict "logo" $logo) }}
+{{ end }}
+{{ $jsonld := dict 
+  "@context" "https://schema.org" 
+  "@type" "BlogPosting" 
+  "headline" .Title 
+  "name" .Params.displayTitle
+  "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00") 
+  "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00") 
+  "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink) 
+  "url" .Permalink 
+  "description" $description 
+  "author" (dict "@type" "Person" "name" $author) 
+  "publisher" $publisher 
+  "inLanguage" .Site.LanguageCode 
+}}
+{{ if .Params.keywords }}
+  {{ $jsonld = merge $jsonld (dict "keywords" .Params.keywords) }}
+{{ end }}
+{{ if .Params.tags }}
+  {{ $jsonld = merge $jsonld (dict "articleSection" .Params.tags) }}
+{{ end }}
+{{ $jsonld | jsonify | safeJS }}
+</script>
+{{ else if .IsHome }}
+<script type="application/ld+json">
+{{ $description := .Params.description | default .Params.Summary | default .Site.Params.about.description }}
+{{ $author := .Params.author | default .Site.Author }}
+{{ $authorObj := dict "@type" "Person" "name" $author }}
+{{ $publisherObj := dict "@type" "Person" "name" $author }}
+{{ $jsonld := dict 
+  "@context" "https://schema.org" 
+  "@type" "WebSite" 
+  "name" .Site.Title
+  "url" .Site.BaseURL
+  "description" $description
+  "author" $authorObj
+  "publisher" $publisherObj
+}}
+{{ if .Params.keywords }}
+  {{ $jsonld = merge $jsonld (dict "keywords" .Params.keywords) }}
+{{ end }}
+{{ $jsonld | jsonify | safeJS }}
+</script>
+{{ else if in .RelPermalink "/about/" }}
+<script type="application/ld+json">
+{{ $author := .Params.author | default .Site.Author }}
+{{ $description := .Params.description | default .Params.Summary | default .Site.Params.about.description }}
+{{ $mainEntity := dict "@type" "Person" "name" $author "description" $description }}
+{{ if .Params.keywords }}
+  {{ $mainEntity = merge $mainEntity (dict "knowsAbout" .Params.keywords) }}
+{{ end }}
+{{ $jsonld := dict 
+  "@context" "https://schema.org" 
+  "@type" "ProfilePage" 
+  "mainEntity" $mainEntity
+  "url" .Permalink
+}}
+{{ $jsonld | jsonify | safeJS }}
+</script>
+{{ end }}
