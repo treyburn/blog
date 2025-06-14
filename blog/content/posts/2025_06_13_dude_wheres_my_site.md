@@ -9,7 +9,7 @@ description = 'tuning seo/search engine optimization for my blog while also bloc
 summary = '' # seo summary? unclear of usecase
 aliases = [] # re-directs from moved content
 tags = [] # content grouping tags
-keywords = ["seo", "search engine optimization", "ai", "cloudflare", "search"] # seo keywords
+keywords = ["seo", "search engine optimization", "ai", "cloudflare", "search", "enslopification"] # seo keywords
 +++
 ## the state of search
 so after [yeeting](2025_05_04_my_first_post.md) my blog into the void, i was surprised to find that even after a week i cannot find it on my [favorite search engine](https://kagi.com).
