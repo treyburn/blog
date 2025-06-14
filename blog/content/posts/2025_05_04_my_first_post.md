@@ -4,10 +4,11 @@ author = "travis reyburn"
 title = "hola mundo"
 subtitle = "the journey of creating my blog"
 tagline = "trials and tribulations of getting this thing up and runnin'"
-description = ""
-summary = ""
+description = "blogging about building this site using hugo, podman, ai, just, cloudflare, and porkbun"
+summary = "the inagural blog post declaring how the blog came to be. the good, the bad, and the rants. sorry mom."
 aliases = []
-tags = ["blogging", "ai", "podman", "just", "hugo", "cloudflare", "porkbun"]
+tags = []
+keywords = ["blogging", "ai", "podman", "just", "hugo", "cloudflare", "porkbun"] # seo keywords
 +++
 ## why?
 

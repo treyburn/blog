@@ -63,9 +63,6 @@ url = "mailto:hey@treyburn.dev"
 
 
 [taxonomies]
-category = "categories"
-tag = "tags"
-series = "series"
 
 [markup]
     [markup.goldmark]

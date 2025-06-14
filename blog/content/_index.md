@@ -2,6 +2,9 @@
 title = "home"
 tagline = "this is a warning system test"
 author = "travis reyburn"
+description = "Travis Reyburn's personal blog sharing thoughts on software engineering, outdoor adventures, and life experiences"
+summary = "A personal blog by Travis Reyburn featuring posts about golang development, outdoor activities, and personal reflections"
+keywords = ["personal blog", "software engineering blog", "golang blog", "outdoor adventures", "tech writing", "developer journal"]
 +++
 
 ## on my mind
