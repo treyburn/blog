@@ -1,30 +1,15 @@
 <div class="footer__lang">
 <p>
-    {{ $siteLanguages := .Site.Languages }}
-    {{ $pageLang := .Page.Lang }}
-
-    {{ $currentPage := . }}
-    {{ $pageName := "" }}
-    {{ range .Site.Menus.main }}
-    {{ if eq ($currentPage.Permalink) (.URL | absLangURL) }}
-    {{ $pageName = .Name }}
-    {{ end }}
-    {{ end }}
-
-    {{ range .Page.AllTranslations }}
-    {{ $translation := .}}
-    {{ range $siteLanguages }}
-    {{ if eq $translation.Lang .Lang }}
-    {{ $selected := false }}
-    {{ if eq $pageLang .Lang }}
-    <br/><span class="active">$ echo <span class="upper">$LANG</span><br/><b>{{ .LanguageName }}</b><br/>
-
+    <br/>
+    <span class="active">$ echo <span class="upper">$LANG</span>
+    <br/>
+    {{- if .Params.displayLanguage }}
+    <b>{{ .Params.displayLanguage }}</b>
     {{ else }}
-    <br/><a href="{{ $translation.Permalink }}">export LANG={{ .LanguageName }}; ./{{ $pageName }}</a><br/>
+    <b>{{ .Site.Params.language.defaultContentLanguageName }}</b>
     {{ end }}
-    {{ end }}
-    {{ end }}
-    {{ end }}
+    <br/>
+    <br/>
+    <br/>
 </p>
-<br /><br />
 </div>
