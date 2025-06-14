@@ -10,5 +10,5 @@ description = '' # seo description? unclear of usecase
 summary = '' # seo summary? unclear of usecase
 aliases = [] # re-directs from moved content
 tags = [] # content grouping tags
-keywords = [] # seo keywords - presently unused
+keywords = [] # seo keywords
 +++
