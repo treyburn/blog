@@ -2,12 +2,12 @@
 title = "about"
 displayTitle = "whoami --verbose"
 tagline = "a litte bit about yours truly"
-description = ""
-summary = ""
+description = "Software engineer Travis Reyburn's personal blog about coding, outdoor adventures, and life experiences"
+summary = "Learn more about Travis Reyburn, a software engineer specializing in golang, graph data platforms, and mapping applications"
 author = "travis reyburn"
 alias = []
-tags = ["about", "about-me", "bio", "intro"]
-keywords = []
+tags = []
+keywords = ["software engineer", "golang developer", "personal blog", "outdoor enthusiast", "mapping applications", "travis reyburn"]
 +++
 ## the author
 🤘 hej! i'm travis.
