@@ -7,7 +7,8 @@ tagline = "trials and tribulations of getting this thing up and runnin'"
 description = ""
 summary = ""
 aliases = []
-tags = ["blogging", "ai", "podman", "just", "hugo", "cloudflare", "porkbun"]
+tags = []
+keywords = ["blogging", "ai", "podman", "just", "hugo", "cloudflare", "porkbun"] # seo keywords - presently unused
 +++
 ## why?
 

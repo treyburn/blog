@@ -6,8 +6,10 @@ displayTitle = "rock foundations and paper homes"
 subtitle = "the duality of linux"
 tagline = "adventures in being a desktop linux operator"
 description = ""
-aliases = []
 summary = ""
+aliases = []
+tags = []
+keywords = ["personal", "introspective", "depression"]
 +++
 ## a beginner's thoughts on linux
 

@@ -9,8 +9,8 @@ tagline = "sorry for the downer;\nenjoy the cake"
 description = ""
 summary = ""
 aliases = []
-tags = ["personal", "introspective", "depression"]
-keywords = []
+tags = []
+keywords = ["personal", "introspective", "depression"]
 +++
 
 ## on birthdays
