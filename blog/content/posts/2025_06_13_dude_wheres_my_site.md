@@ -24,12 +24,12 @@ in exchange for being nice to robots crawling the web -- they let our page show 
 
 in theory. 
 
-mostly it's gamed nonsense -- there's an entire industry out there to shove their ad riddled website down your throat. the very notion of seo makes me a bit queasy -- but i'd still like folks to have the opportunity to stumble upon this page one day[^2].
+mostly, it's gamed nonsense -- there's an entire industry out there to shove their ad riddled website down your throat. the very notion of seo makes me a bit queasy -- but i'd still like folks to have the opportunity to stumble upon this page one day[^2].
 
 ## ai
 but not all robots are nice. in fact -- it seems that most of the internet traffic is explicitly *not nice*. ai companies are [basically rampaging](https://blog.cloudflare.com/declaring-your-aindependence-block-ai-bots-scrapers-and-crawlers-with-a-single-click/) across the web in a never ending thirst for data. 
 
-this website? it's future ai slop fodder.
+this website? its future ai slop fodder.
 
 but not all hope is lost. we are the resistance. i have told the ai sloppers to [cram it](https://treyburn.dev/robots.txt) -- and so have many others.
 
@@ -42,9 +42,9 @@ in the end -- creating a robots.txt isn't enough. you've got to really gunk up y
 
 frankly, i despise this practice. so -- being the hypocrite that i am -- i let junie handle the enslopification of my site for me[^4].
 
-i have no idea if it'll work -- but if you ever find this page by accident -- then i guess it must have!
+i have no idea if it works -- but if you ever find this page by accident -- then i guess it must have!
 
 [^1]: although having to do this at all feels rather unoptimized to me.
 [^2]: hi mom -- please don't bring this up if you find it lol.
 [^3]: but why wouldn't a *non-profit* like openai behave? 😇
-[^4]: it only feels appropriate. as a robot -- surely junie is better suited to churning our robot slop settings than me.
+[^4]: it only feels appropriate. as a robot -- surely junie is better suited to churning out robot slop settings than me.
