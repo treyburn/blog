@@ -1,5 +1,10 @@
 <title>{{ with .Title }}{{ . }} &ndash; {{end}}{{ .Site.Title }}</title>
-{{ with .Site.Params.about }}<meta name="description" content="{{ .description }}">{{ end }}
+
+<!-- Enhanced description meta tag -->
+<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ with .Params.Summary }}{{ . }}{{ else }}{{ with .Site.Params.about }}{{ .description }}{{ end }}{{ end }}{{ end }}">
+
+<!-- Meta keywords tag -->
+{{ with .Params.keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end }}
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8"/>
@@ -30,15 +35,32 @@
   {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
 {{ end }}
 
-<!-- OG meta properties -->
+<!-- Enhanced OG meta properties -->
 <meta property="og:title" content="{{ with .Title }}{{ . }} &ndash; {{end}}{{ .Site.Title }}" />
 <meta property="og:url" content="{{ .Page.Permalink }}" />
-{{ if isset .Params "description" }}
-  <meta property="og:description" content="{{ with .Params.description }}{{ . }} &ndash; {{end}}"/> 
-{{ else }}
-  {{ with .Site.Params.about }}
-    <meta property="og:description" content="{{ .description }}"/> 
-  {{ end }}
+<meta property="og:type" content="{{ if eq .Section "posts" }}article{{ else }}website{{ end }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+
+<!-- OG description -->
+<meta property="og:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ with .Params.Summary }}{{ . }}{{ else }}{{ with .Site.Params.about }}{{ .description }}{{ end }}{{ end }}{{ end }}">
+
+<!-- OG dates for articles -->
+{{ if eq .Section "posts" }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
 {{ end }}
+
+<!-- Article tags for keywords -->
+{{ with .Params.keywords }}
+<meta property="article:tag" content="{{ delimit . ", " }}">
+{{ end }}
+
+<!-- Article tags for tags -->
+{{ with .Params.tags }}
+{{ range . }}
+<meta property="article:tag" content="{{ . }}">
+{{ end }}
+{{ end }}
+
 {{ with .Site.LanguageCode}}<meta property="og:locale" content="{{ . }}" />{{ end }}
 {{ with .Site.Params.about }}<meta property="og:image" content="{{ with .logo_image }}{{ . | absURL }}{{ end }}" />{{ end }}
