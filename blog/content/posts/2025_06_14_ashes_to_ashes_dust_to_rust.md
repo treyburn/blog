@@ -139,8 +139,6 @@ is that really any more legible than go's error handling?
 res, err := reader.ReadString('\n')
 if err != nil {
 	fmt.Println("error: ", err)
-} else {
-	fmt.Println("ok: ", res)
 }
 ```
 
@@ -165,9 +163,9 @@ another piece i haven't seen addressed with rust's `Result` type -- is that some
 
 if i'm paginating over something in go and encounter an error -- i can return `int, err`. that `err` value is critical in indicating tat something didn't process correctly -- but the `int` value might represent the current location of pagination and be useful for a retry mechanism. i'm not sure how rust handles that (maybe by creating a custom error type?) but it does feel like a shortcoming of the `Result` enum approach where it *must* be either `int` or `err`.
 
-as a side note -- i'll say that im pretty blown away by how education the rust compiler is so far. i've actually stopped googling questions, and just writting broken code to see what the compiler tells me about it instead. 
+as a side note -- i'll say that i'm pretty blown away by how education the rust compiler is so far. i've actually stopped googling questions and insteam am just writing broken code to see what the compiler tells me about it. 
 
-also -- the stdlib's built in documentation is super rich and well written and the `rust rover` ide renders it as markdown. i've not seen another language/ide do this -- including go which i feel also has very strong documentation. so kudos to the rust team and jetbrains.
+also -- the stdlib's built-in documentation is super rich and well written and the `rust rover` ide renders it as markdown. i've not seen another language/ide do this -- including go which i feel also has very strong documentation. so kudos to the rust team and jetbrains.
 
 and there's more! the rust compiler seems to have a built-in linter/static analysis tool (a la `go vet` but more powerful) and there are even directives allowing you to declaratively ignore things at a given location -- or entirely suppress it. neat!
 
