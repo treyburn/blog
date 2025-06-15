@@ -1,6 +1,5 @@
 +++
 date = '2025-06-14' # date of publication
-draft = true # set to false or remove to publish
 author = 'Travis Reyburn'
 title = 'Ashes to Ashes Dust to Rust' # official title of the post
 displayTitle = 'Ashes to Ashes Dust to Rust' # display title in content
