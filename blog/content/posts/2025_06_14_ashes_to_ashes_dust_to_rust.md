@@ -247,7 +247,10 @@ fn main() {
 }
 ```
 
-closing thoughts. all the `;` feel so unnecessary. the compiler knows where they're missing -- so it's smart enough to figure things out without them. this feels like an anachronism that snuck into the language. also i don't love the hidden returns in rust -- that's going to take some getting used to and frankly feels like it intentionally makes code harder to read at the benefit of .... like one weird and highly opinionated person that probably should have been ignored and left to die on this particular hill.
+## out of the bucket
+all the `;` feel so unnecessary. the compiler knows where they're missing -- so it's smart enough to figure things out without them. this feels like an anachronism that snuck into the language. also i don't love the hidden returns in rust -- that's going to take some getting used to and frankly feels like it intentionally makes code harder to read at the benefit of .... like one weird and highly opinionated person that probably should have been ignored and left to die on this particular hill.
+
+until next time!
 
 [^1]: but more power to those in a comfy static gig! my adhd brain is simply incapable of it. ouroboros must grow -- lest it devours itself.
 [^2]: i dont think i could possibly rage harder against the endless doom-scrolling these platforms offer. just say 'no', kids.
