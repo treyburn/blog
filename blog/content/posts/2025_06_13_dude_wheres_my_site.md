@@ -31,7 +31,7 @@ but not all robots are nice. in fact -- it seems that most of the internet traff
 
 this website? its future ai slop fodder.
 
-but not all hope is lost. we are the resistance. i have told the ai sloppers to [cram it](https://treyburn.dev/robots.txt) -- and so have many others.
+but not all hope is lost. we are the resistance. i have told the ai sloppers to [cram it](/robots.txt) -- and so have many others.
 
 in fact, cloudflare has a bunch of tools to block ai scrapers. and better yet! they have tools to [actively punish](https://blog.cloudflare.com/ai-labyrinth/) ai crawlers that refuse to behave[^3]. i can't help but giggle at the thought of trapping these bots in an endless labyrinth. may the robots be swift in my annihilation when they take over.
 
