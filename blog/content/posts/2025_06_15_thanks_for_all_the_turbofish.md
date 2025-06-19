@@ -7,7 +7,7 @@ displayTitle = 'Thanks for All the Turbofish' # display title in content
 displayLanguage = 'rust'
 subtitle = 'my continued ramblings through the rust book' # subtitle used for display and content
 tagline = 'never eat raw turbofish in a landlocked lang' # note on the sidebar
-description = 'continuing my joruney of learning rust -- raves, rants, and annoyances galore' # seo description? unclear of usecase
+description = 'continuing my journey of learning rust -- raves, rants, and annoyances galore' # seo description? unclear of usecase
 summary = '' # seo summary? unclear of usecase
 aliases = [] # re-directs from moved content
 tags = [] # content grouping tags
@@ -75,7 +75,7 @@ fn main() {
 }
 ```
 
-## #&%$!* returns
+## #&*%$! returns
 idiomatic rust uses implicit returns in expressions.
 
 this is a big of a bummer for me. this feels like yet another sacrifice of legibility for *"expressiveness"* -- or pointless terseness as i'd declare it.
@@ -124,6 +124,29 @@ fn main() {
 ```
 
 `break counter * 2;` -- seriously? my kingdom for a fucking `return`!
+
+named loops also exist in rust -- as they do in go. although quite honestly, it's pretty rare that i've used them in go.
+```rust
+fn main() {
+    let mut x = 0;
+    'a: loop {
+        x += 1;
+        'b: loop {
+            if x > 10 {
+                continue 'a;
+            } else {
+                break 'b;
+            }      
+        }
+        break;       
+    }
+}
+```
+
+the `'name` syntax is a bit interesting. i think this has to do with lifetimes? at least it looks like the lifetime syntax -- but we'll get to that later.
+
+## wrapping up
+i think that's enough for this blog post. i've got some turbofish to cook.
 
 [^1]: this + the dead simple (to write) concurrency model + god tier cli tooling is what makes me love go. the advantage of go forcing boilerplate on the developer is that you can *just read* what code is doing and understand. a prioritization of read-perf over write-perf is how i like it.
 [^2]: and you better hope those docs ain't lying!
