@@ -1,6 +1,5 @@
 +++
 date = '2025-06-15' # date of publication
-draft = true # set to false or remove to publish
 author = 'Travis Reyburn'
 title = 'Continuing my learnings with the rust book' # official title of the post
 displayTitle = 'Thanks for All the Turbofish' # display title in content
