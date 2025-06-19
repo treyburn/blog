@@ -1,7 +1,7 @@
 +++
 date = '2025-05-31'
 author = "travis reyburn"
-title = "how to repair pop!_os after nvidia-driver-570 black screen"
+title = "repair pop!_os after nvidia-driver-570 update fails"
 displayTitle = "rock foundations and paper homes"
 subtitle = "the duality of linux"
 tagline = "adventures in being a desktop linux operator"
