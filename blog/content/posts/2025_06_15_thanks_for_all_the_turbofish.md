@@ -39,11 +39,15 @@ This helps the inference algorithm understand specifically which type you're try
 
 turbofish! i can't help but giggle. forget `p = np`, naming is the hardest unsolved problem in cs.
 
-so what the heck is turbo fish? well from what i can tell it's an escape hatch to tell the compiler a type when the generics are just too complex for eve it to understand.
+so what the heck is turbo fish? well from what i can tell it's an escape hatch to tell the compiler a type when the generics are just too complex for even it to understand.
 
 another piece that really stood out to me is the `impl trait` mechanism. this has been a big gripe of go for me. i rather dislike duck typing -- just let me declare that something implements an interface. the compile time assertions, a la `var _ Foo = (*fooImpl)(nil)`, are gross.
 
-it also seems that you can derive trait implementations with the `#[derive(Trait)]` directive? unclear. i also tried to find where integer types implement `FromStr` -- and i think i found it hidden in a gnarly `marcro_rules!` ... macro? where it appears to use the string contents to determine if it was signed vs unsigned and an int vs a float? honestly it's rather difficult to read. i suspect this is where i will find my biggest grievances with rust. with go, i can typically click into a function's definition and immediately understand what it's doing. whether its from the stdlib, a 3rd party dep, code a coworker wrote, or code i wrote in the past. it's all clean and straight to the point and generally looks the same regardless of who wrote it. it honestly feels like a superpower[^1] when i can just click through some function definitions and immediately understand a weird bug we're seeing. with rust -- i think this superpower will be gone. it feels like im back in python-land where meta-programming reigns supreme and your only hope is reading docs[^2].
+it also seems that you can derive trait implementations with the `#[derive(Trait)]` directive? unclear. i also tried to find where integer types implement `FromStr` -- and i think i found it hidden in a gnarly `marcro_rules!` ... macro? where it appears to use the string contents to determine if it was signed vs unsigned and an int vs a float? honestly it's rather difficult to read. 
+
+i suspect this is where i will find my biggest grievances with rust. with go, i can typically click into a function's definition and immediately understand what it's doing. whether its from the stdlib, a 3rd party dep, code a coworker wrote, or code i wrote in the past. it's all clean and straight to the point and generally looks the same regardless of who wrote it. 
+
+it honestly feels like a superpower[^1] when i can just click through some function definitions and immediately understand a weird bug we're seeing. with rust -- i think this superpower will be gone. it feels like im back in python-land where meta-programming reigns supreme and your only hope is reading docs[^2].
 
 ## digression digested
 ok - let's get back on topic and try to actually make some progress.
@@ -63,7 +67,7 @@ fn main() {
 ```
 
 ## array vs vec
-ah -- and there's arrays (fixed length and on the stack) vs vectors (growable/shrinkable and on the heap) vectors are the "same" as slices in go. makes sense!
+ah -- and there's arrays (fixed length and on the stack) vs vectors (growable/shrinkable and on the heap). vectors are the "same" as slices in go. makes sense!
 ```rust
 fn main() {
     // it can be re-sized, appended on, trimmed, etc 
@@ -74,7 +78,7 @@ fn main() {
 }
 ```
 
-## #&*%$! returns
+## %$*!# returns
 idiomatic rust uses implicit returns in expressions.
 
 this is a big of a bummer for me. this feels like yet another sacrifice of legibility for *"expressiveness"* -- or pointless terseness as i'd declare it.
@@ -88,7 +92,7 @@ would `return 5` really be that hard to type? having to spot all the locations w
 
 maybe this is some nuclear hot-take -- but code is infinitely easier to write than read and we should not optimize for improved ergonomics of writing over reading.
 
-honestly -- im increasingly aggravated by this. i *really* want to love rust -- but decisions like this just feel so annoying. and they accumulate as you use and learn the language. i suspect i would rather dislike the person who argued passionately for this particular language design choice.
+honestly -- im getting increasingly aggravated just writing this. i *really* want to love rust -- but decisions like this just feel so annoying. and they accumulate as you use and learn the language. i suspect i would rather dislike the person who argued passionately for this particular language design choice.
 
 that's not to say you *must* use implicit returns. in fact -- rust does give you the means to enforce this via clippy:
 
@@ -102,7 +106,9 @@ it just feels so pointless to have to do this. and it'll cause the kind of needl
 moving on.
 
 ## thrown for a loop
-loops are a bit strange in rust. `loop`, `while`, and `for` are all loop keywords. `loop` vs `while` feel redundant to me -- although i get the subtle distinction. i guess it's better than `for` being the only loop keyword like in go. `for { ... }` always felt a bit alien.
+loops are both totally normal and a bit strange in rust. `loop`, `while`, and `for` are all loop keywords. `loop` vs `while` feel redundant to me -- although i get the subtle distinction (`loop` doesn't/cannot evaluate anything -- while `while` ... hehe ... must evaluate on each loop). 
+
+i guess it's better than `for` being the only loop keyword like in go. `for { ... }` always felt a bit alien.
 
 loops can also return values -- but seeing this is just making me wish we had ... explicit returns!
 
