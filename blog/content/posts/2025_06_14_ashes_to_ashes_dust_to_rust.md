@@ -1,7 +1,7 @@
 +++
 date = '2025-06-14' # date of publication
 author = 'Travis Reyburn'
-title = 'Ashes to Ashes Dust to Rust' # official title of the post
+title = 'a go developer learns rust' # official title of the post
 displayTitle = 'Ashes to Ashes Dust to Rust' # display title in content
 displayLanguage = 'rust'
 subtitle = 'the beginnings of my journey to properly learn rust' # subtitle used for display and content
@@ -10,7 +10,7 @@ description = 'a beginners journey of learning the rust programming language' # 
 summary = '' # seo summary? unclear of usecase
 aliases = [] # re-directs from moved content
 tags = [] # content grouping tags
-keywords = ["rust", "programming", "programming in rust", "rustlang", "rust programming language", "cargo"] # seo keywords
+keywords = ["rust", "programming", "learning rust", "programming in rust", "rustlang", "rust programming language", "cargo"] # seo keywords
 +++
 ## on the requirements of learning
 many a software engineer has complained that the profession is an endless treadmill of learning. they're not wrong -- but i don't see this as drudgery. this is partly why i got into the profession in the first place. things move fast -- there's always more to learn! i rather like that lack of stagnation[^1].
