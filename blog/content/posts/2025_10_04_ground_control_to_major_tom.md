@@ -1,6 +1,6 @@
 +++
 date = '2025-10-04' # date of publication
-draft = true # set to false or remove to publish
+draft = false # set to false or remove to publish
 author = 'Travis Reyburn'
 title = 'Ground Control to Major Tom' # official title of the post
 displayTitle = 'Ground Control to Major Tom' # display title in content
