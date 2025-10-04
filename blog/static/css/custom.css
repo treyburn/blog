@@ -31,7 +31,7 @@ h1:before {
 }
 
 .page__logo-inner:after {
-    content: "] $ cd";
+    content: "]";
 }
 
 /* make image round and capped at 240px*/
