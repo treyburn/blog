@@ -5,15 +5,17 @@
   <p>/travis/mind/welcome</p>
   <h2>latest posts</h2>
   <div class="content__body">
-    {{ range first 5 (where .Site.RegularPages "Type" "posts") }}
-    <article class="post">
-      {{ $title := .Title }}
-        {{ if .Params.displayTitle }}
-          {{ $title = .Params.displayTitle }}
+      <ul>
+        {{ range first 5 (where .Site.RegularPages "Type" "posts") }}
+        <article class="post">
+          {{ $title := .Title }}
+            {{ if .Params.displayTitle }}
+              {{ $title = .Params.displayTitle }}
+            {{ end }}
+          <li><a href="{{ .Permalink }}">{{ $title | markdownify }}</a></li>
+        </article>
         {{ end }}
-      <li><a href="{{ .Permalink }}">{{ $title | markdownify }}</a></li>
-    </article>
-    {{ end }}
+      </ul>
     <p>{{ .Content }}</p>
   </div>
 {{ end }}
