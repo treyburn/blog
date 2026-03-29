@@ -1,3 +1,13 @@
+html {
+    background-color: var(--bg);
+    scrollbar-gutter: stable;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
 :root {
     --logo: #7c589e;
     text-transform: lowercase; /* no gods no masters */
@@ -26,8 +36,22 @@ h1:before {
     font-size: 16px;
 }
 
+.page {
+    min-height: calc(100vh - 1rem);
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 1rem 1rem 0;
+    grid-template-rows: auto 1fr auto auto;
+    grid-row-gap: 1rem;
+}
+
 .page__body {
-    min-height: 20rem;
+    min-height: 0;
+    align-self: start;
+}
+
+.page__footer {
+    padding-top: 2rem;
 }
 
 .page__logo-inner:after {
