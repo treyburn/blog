@@ -67,6 +67,10 @@ url = "mailto:hey@treyburn.dev"
 
 [taxonomies]
 
+[markup.highlight]
+    noClasses = true
+    style = "catppuccin-mocha"
+
 [markup]
     [markup.goldmark]
         [markup.goldmark.renderer]
