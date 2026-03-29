@@ -2,7 +2,7 @@
 date = '2025-06-19' # date of publication
 author = 'Travis Reyburn'
 title = 'Pwnership' # official title of the post
-displayTitle = 'Pwnership' # display title in content
+displayTitle = 'pwnership' # display title in content
 displayLanguage = 'rust'
 subtitle = "just tell me if you need to borrow something, alright?" # subtitle used for display and content
 tagline = "you can borrow a piano but you can't turbo fish" # note on the sidebar

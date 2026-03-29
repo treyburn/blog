@@ -2,7 +2,7 @@
 date = '2025-06-15' # date of publication
 author = 'Travis Reyburn'
 title = 'Continuing my learnings with the rust book' # official title of the post
-displayTitle = 'Thanks for All the Turbofish' # display title in content
+displayTitle = 'thanks for all the turbofish' # display title in content
 displayLanguage = 'rust'
 subtitle = 'my continued ramblings through the rust book' # subtitle used for display and content
 tagline = 'never eat raw turbofish in a landlocked lang' # note on the sidebar
