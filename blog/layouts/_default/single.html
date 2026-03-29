@@ -32,4 +32,9 @@
 	    On this page:
 	    {{ .TableOfContents }}
     {{ end }}
+
+    {{ if eq .Section "posts" }}
+    <hr>
+    {{- partial "lang.html" . -}}
+    {{ end }}
 {{ end }}
