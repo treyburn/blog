@@ -50,6 +50,11 @@ icon = "fa-solid fa-paper-plane"
 title = "Email"
 url = "mailto:hey@treyburn.dev"
 
+[[params.socialLinks]]
+icon = "fa-solid fa-rss"
+title = "RSS Feed"
+url = "/posts/index.xml"
+
 [languages]
     [languages.en]
         disabled = false
@@ -64,6 +69,10 @@ url = "mailto:hey@treyburn.dev"
         url = "/about/"
         weight = 10
 
+
+[outputs]
+home = ["HTML"]
+section = ["HTML", "RSS"]
 
 [taxonomies]
 
