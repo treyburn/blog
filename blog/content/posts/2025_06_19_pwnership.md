@@ -31,6 +31,7 @@ so when rust makes claims about its strong memory safety guarantees -- it's actu
 and how does rust make those guarantees? a huge piece of this is it does that by handling the manual memory management for you.
 
 > wait -- isn't rust a language with manual memory management?
+{.styled-quote}
 
 no! that is to say -- rust has no garbage collection -- but there's no manual memory management[^1]. the compiler does all the allocations/deallocations for you! this surprised me too -- when i began my learning journey, i was expecting to have to call `free()` all over the place.
 

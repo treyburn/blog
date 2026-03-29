@@ -64,11 +64,19 @@ code {
     color: var(--base0E);
 }
 
-/* Blockquote styling */
-blockquote {
+/* Blockquote styling - opt-in via {.styled-quote} attribute in markdown */
+blockquote.styled-quote {
     background-color: var(--inner-bg);
     border-left: 4px solid var(--base0D);
-    padding: 1rem 1.5rem;
+    padding: 0 0.5rem;
+    margin: 1.5rem 0;
+}
+
+/* Additional custom blockquote styling - useful if there's a conversation going on */
+blockquote.styled-quote-2 {
+    background-color: var(--inner-bg);
+    border-left: 4px solid var(--base0B);
+    padding: 0 0.5rem;
     margin: 1.5rem 0;
 }
 

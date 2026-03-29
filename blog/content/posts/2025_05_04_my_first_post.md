@@ -195,6 +195,7 @@ it's still under a garbage random `https://8b695abe.blog-9zz.pages.dev/` domain.
 > It's not DNS
 > There's no way it's DNS
 > It was DNS
+{.styled-quote}
 
 
 i bought this domain in one of my *this-is-a-great-idea-i-should-buy-the-domain* binges[^17] back when google domains [was still a thing](https://killedbygoogle.com/). now it's managed by squarespace. i guess they're probably fine? idk, they seem kinda sus and [porkbun](https://porkbun.com/) has branding that just vibes with me too much. the pig **gets** me. 
