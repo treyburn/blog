@@ -1,5 +1,6 @@
 :root {
     --logo: #7c589e;
+    text-transform: lowercase; /* no gods no masters */
 }
 
 .footnote-ref {
@@ -42,6 +43,33 @@ h1:before {
 
 .about__description {
     font-weight: normal;
+}
+
+/* Let Chroma inline syntax highlighting colors take precedence over risotto defaults */
+.highlight pre code {
+    color: inherit;
+}
+.highlight span {
+    color: inherit;
+}
+
+/* Preserve original casing in code blocks */
+pre,
+code {
+    text-transform: none;
+}
+
+/* Inline code styling */
+:not(pre) > code {
+    color: var(--base0E);
+}
+
+/* Blockquote styling */
+blockquote {
+    background-color: var(--inner-bg);
+    border-left: 4px solid var(--base0D);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
 }
 
 /* Hide side section on small devices */
