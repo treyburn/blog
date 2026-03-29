@@ -2,11 +2,11 @@
 date = "2025-06-03"
 draft = true
 author = "travis reyburn"
-title = "birthday reflections"
+title = "Birthday Reflections"
 displayTitle = "yet another orbit completed"
 subtitle = "my quiet sadness for birthdays"
 tagline = "sorry for the downer;\nenjoy the cake"
-description = "an introspective look at birthdays and depression"
+description = "An introspective look at birthdays and depression"
 summary = ""
 aliases = []
 tags = []
