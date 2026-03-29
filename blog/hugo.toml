@@ -3,7 +3,6 @@ languageCode = "en-us"
 defaultContentLanguage = 'en'
 theme = ["risotto"]
 title = "travis' blog"
-author = "Travis Reyburn"
 copyright = "made with 🚴 in boulder, co"
 
 # Automatically add content sections to the main menu
@@ -13,6 +12,7 @@ sectionPagesMenu = "main"
 pagerSize = 3
 
 [params]
+author = "Travis Reyburn"
 noindex = false
 
 [params.language]
