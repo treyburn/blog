@@ -35,7 +35,8 @@ so i clicked into the function definition of `parse()` -- and discover that it c
 ## so long focus
 i also noticed this peculiar note:
 
-> As such, parse is one of the few times you'll see the syntax affectionately known as the 'turbofish': ::<>(). This helps the inference algorithm understand specifically which type you're trying to parse into.
+> As such, parse is one of the few times you'll see the syntax affectionately known as the 'turbofish': ::<>(). This helps the inference algorithm understand specifically which type you're trying to parse into. 
+{.styled-quote}
 
 
 turbofish! i can't help but giggle. forget `p = np`, naming is the hardest unsolved problem in cs.

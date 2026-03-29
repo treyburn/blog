@@ -56,14 +56,17 @@ so what now?
 we go begging to our friend [claude](https://claude.ai).
 
 > hey claude -- I’m running a dual boot of windows and pop os of my machine. I’m using refind as my boot manager. I tried to update a graphics driver on pop os but I messed up and now I cannot boot into pop os. how do I recover from this?
+{.styled-quote}
 
 > greetings human -- here are a few options:
->   Option 1: Boot into Recovery Mode
->   Option 2: Use a Live USB
->   Option 3: Boot with Recovery Parameters
->   Option 4: System76 Refresh Tool
+>   1. Boot into Recovery Mode
+>   2. Use a Live USB
+>   3. Boot with Recovery Parameters
+>   4. System76 Refresh Tool
+{.styled-quote-2}
 
 > hey claude -- i've tried option 1 and 3. i don't want to try option 4 yet. tell me more about option 3.
+{.styled-quote}
 
 > greetings human -- follow these steps and you'll be on your way to publishing a blog nobody will ever read.
 >   1. Create a Pop!_OS live USB from another computer. This is what you used to install pop!_os you did keep that, right?
@@ -71,6 +74,7 @@ we go begging to our friend [claude](https://claude.ai).
 >   3. mount your installed Pop!_OS partition
 >   4. Chroot into your installation
 >   5. Draw the owl --erm -- fix your driver issue
+{.styled-quote-2}
 
 so what did claude tell me to run in order to mount the partition?
 
@@ -112,8 +116,11 @@ sudo echo "test"
 bingo! we're in.
 
 > ok claude -- i have chroot'd into my partition -- what now?
+{.styled-quote}
 
 > greetings human -- now we simply blow away that busted-ass nvidia driver!
+{.styled-quote-2}
+
 ```shell
 sudo apt remove --purge nvidia-driver-* \
   nvidia-dkms-* \
@@ -127,8 +134,10 @@ hold my beer -- here we go!
 > dpkg was interrupted, you must manually run sudp dpkg --configure -a to resolve the problem
 
 > ok claude -- what the heck was that?
+{.styled-quote}
 
 > This is actually a good sign -- it means the previous driver installation was interrupted (probably when the system failed to boot), and dpkg just needs to finish what it was doing. Run the following and you'll be on your way.
+{.styled-quote-2}
 ```shell
 # Update package database
 sudo apt update
@@ -146,9 +155,12 @@ sudo dpkg --configure -a
 so i ran all that and got to `sudo dpkg --configure -a` and got some pretty scary looking console barf with a lot of warnings and errors. 😬
 
 > claude! what's going on?! i'm freaking out, man!
+{.styled-quote}
 
 > Excellent! You should be freaking out, man. You are trusting a sensitive computer repair routine to a next-token-prediction model. I don't actually understand any of this linux crap. It's all just matrices and markov chains. It all looks the same; It all bleeds together, man.
-
+>
+> ...
+> 
 > Anyways... this output shows that the dpkg configuration completed successfully! Here's what happened:
 > 
 > Good News:
@@ -163,6 +175,8 @@ so i ran all that and got to `sudo dpkg --configure -a` and got some pretty scar
 >   3. The systemd service warnings are normal
 > 
 > Your system should now be bootable! Let's clean up and test. Run these commands next.
+{.styled-quote-2}
+
 ```shell
 # Update initramfs one more time to be sure
 sudo update-initramfs -u -k all

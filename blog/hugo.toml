@@ -76,6 +76,9 @@ url = "mailto:hey@treyburn.dev"
         [markup.goldmark.renderer]
             hardWraps = true
             unsafe = true
+        [markup.goldmark.parser]
+            [markup.goldmark.parser.attribute]
+                block = true
         [markup.goldmark.extensions]
             typographer = false
             footnote = true
