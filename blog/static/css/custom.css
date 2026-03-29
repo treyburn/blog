@@ -1,5 +1,6 @@
 html {
     background-color: var(--bg);
+    scrollbar-gutter: stable;
 }
 
 body {
@@ -39,14 +40,14 @@ h1:before {
     min-height: calc(100vh - 1rem);
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: 1rem;
-    padding-bottom: 0;
+    padding: 1rem 1rem 0;
     grid-template-rows: auto 1fr auto auto;
     grid-row-gap: 1rem;
 }
 
 .page__body {
-    min-height: 20rem;
+    min-height: 0;
+    align-self: start;
 }
 
 .page__logo-inner:after {
