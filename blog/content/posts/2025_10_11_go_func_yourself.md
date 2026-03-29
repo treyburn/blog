@@ -3,7 +3,7 @@ date = '2025-10-11' # date of publication
 draft = false # set to false or remove to publish
 author = 'Travis Reyburn'
 title = 'Go Func Yourself' # official title of the post
-displayTitle = 'Go Func Yourself' # display title in content
+displayTitle = 'go func yourself' # display title in content
 displayLanguage = 'golang'
 subtitle = 'all the rough edges ive gotten splinters from' # subtitle used for display and content
 tagline = "no you're the idiosyncrasy" # note on the sidebar
@@ -64,7 +64,11 @@ this can be particularly tricky with chainable functions.
 a la
 
 ```go
-foo().add().then().maybe().somethingElse()
+foo().
+	add().
+	then().
+	maybe().
+	somethingElse()
 ```
 
 if you're returning a concrete struct in these chainable methods -- then good luck ever producing an interface for this. i've seen this pattern with frequently and always have to write an ugly adapter for it. if go just supported covariance -- or the community preferred returning interfaces -- then we wouldn't hit the issue so frequently.
@@ -119,7 +123,7 @@ import (
 func handlePanic() {
 	err := recover()
 	if err != nil {
-		fmt.Println("caught a panic!")
+		fmt.Println("caught panic!")
     }
 }
 
@@ -167,12 +171,12 @@ import (
 func handlePanic() {
 	err := recover()
 	if err != nil {
-		fmt.Println("caught a panic!")
+		fmt.Println("caught panic!")
     }
 }
 
 func releaseSomething() {
-	fmt.Println("we always want to release this")
+	fmt.Println("always release")
 }
 
 func panicsOn10(x int) {

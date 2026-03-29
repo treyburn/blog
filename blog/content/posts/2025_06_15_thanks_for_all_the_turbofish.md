@@ -2,7 +2,7 @@
 date = '2025-06-15' # date of publication
 author = 'Travis Reyburn'
 title = 'Continuing my learnings with the rust book' # official title of the post
-displayTitle = 'Thanks for All the Turbofish' # display title in content
+displayTitle = 'thanks for all the turbofish' # display title in content
 displayLanguage = 'rust'
 subtitle = 'my continued ramblings through the rust book' # subtitle used for display and content
 tagline = 'never eat raw turbofish in a landlocked lang' # note on the sidebar
@@ -21,7 +21,9 @@ it proceeds to talk about data types in rust -- which i know from previous expos
 
 anyways, we come back to a line we wrote yesterday:
 ```rust
-let guess: u32 = "42".parse().expect("Not a number!");
+let guess: u32 = "42"
+    .parse()
+    .expect("Not a number!");
 ```
 
 i know the example just wants to talk about basic types and type declarations -- but i made me curious how `parse()` works. i swapped `guess: u32` to `guess: i64` expecting a compiler error -- but i did not get one! i figured maybe that's because `i64` is a superset of `u32`. perhaps a float like `f32` will error out ... but it does not!
@@ -32,10 +34,9 @@ so i clicked into the function definition of `parse()` -- and discover that it c
 
 ## so long focus
 i also noticed this peculiar note:
-```text
-As such, parse is one of the few times you'll see the syntax affectionately known as the 'turbofish': ::<>(). 
-This helps the inference algorithm understand specifically which type you're trying to parse into.
-```
+
+> As such, parse is one of the few times you'll see the syntax affectionately known as the 'turbofish': ::<>(). This helps the inference algorithm understand specifically which type you're trying to parse into.
+
 
 turbofish! i can't help but giggle. forget `p = np`, naming is the hardest unsolved problem in cs.
 
@@ -62,7 +63,7 @@ fn main() {
 
     let (x, y, z) = tup;
 
-    println!("The value of y is: {y}");
+    println!("y is: {y}");
 }
 ```
 
@@ -70,11 +71,13 @@ fn main() {
 ah -- and there's arrays (fixed length and on the stack) vs vectors (growable/shrinkable and on the heap). vectors are the "same" as slices in go. makes sense!
 ```rust
 fn main() {
-    // it can be re-sized, appended on, trimmed, etc 
-    let this_is_a_slice = vec![1, 2, 3];
+    // it can be re-sized, 
+    // appended on, trimmed, etc 
+    let this_slice = vec![1, 2, 3];
     
-    // it cannot be re-sized, appended on, etc
-    let this_is_an_array = [1, 2, 3];
+    // it cannot be re-sized, 
+    // appended on, etc
+    let this_array = [1, 2, 3];
 }
 ```
 
@@ -124,7 +127,7 @@ fn main() {
         }
     };
 
-    println!("The result is {result}");
+    println!("result: {result}");
 }
 ```
 

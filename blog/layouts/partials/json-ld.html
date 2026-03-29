@@ -1,6 +1,6 @@
 {{ if eq .Section "posts" }}
 <script type="application/ld+json">
-{{ $author := .Params.author | default .Site.Author }}
+{{ $author := .Params.author | default .Site.Params.author }}
 {{ $description := .Params.description | default .Params.Summary }}
 {{ $publisher := dict "name" .Site.Title "@type" "Organization" }}
 {{ if .Site.Params.about.logo_image }}
@@ -32,7 +32,7 @@
 {{ else if .IsHome }}
 <script type="application/ld+json">
 {{ $description := .Params.description | default .Params.Summary | default .Site.Params.about.description }}
-{{ $author := .Params.author | default .Site.Author }}
+{{ $author := .Params.author | default .Site.Params.author }}
 {{ $authorObj := dict "@type" "Person" "name" $author }}
 {{ $publisherObj := dict "@type" "Person" "name" $author }}
 {{ $jsonld := dict 
@@ -51,7 +51,7 @@
 </script>
 {{ else if in .RelPermalink "/about/" }}
 <script type="application/ld+json">
-{{ $author := .Params.author | default .Site.Author }}
+{{ $author := .Params.author | default .Site.Params.author }}
 {{ $description := .Params.description | default .Params.Summary | default .Site.Params.about.description }}
 {{ $mainEntity := dict "@type" "Person" "name" $author "description" $description }}
 {{ if .Params.keywords }}

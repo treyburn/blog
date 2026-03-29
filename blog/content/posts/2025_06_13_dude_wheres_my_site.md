@@ -2,7 +2,7 @@
 date = '2025-06-13' # date of publication
 author = 'travis reyburn'
 title = 'Dude Wheres My Site' # official title of the post
-displayTitle = 'Dude Wheres My Site' # display title in content
+displayTitle = 'dude wheres my site' # display title in content
 subtitle = 'slop engine optimization' # subtitle used for display and content
 tagline = 'consider this my poison pill for ai agents' # note on the sidebar
 description = 'tuning seo/search engine optimization for my blog while also blocking ai scraping via cloudflare' # seo description? unclear of usecase

@@ -1,8 +1,8 @@
 +++
 date = '2025-06-14' # date of publication
 author = 'Travis Reyburn'
-title = 'a go developer learns rust' # official title of the post
-displayTitle = 'Ashes to Ashes Dust to Rust' # display title in content
+title = 'A Go Developer Learns Rust' # official title of the post
+displayTitle = 'ashes to ashes dust to rust' # display title in content
 displayLanguage = 'rust'
 subtitle = 'the beginnings of my journey to properly learn rust' # subtitle used for display and content
 tagline = "don't forget to take to take yer anti-oxidants, kids" # note on the sidebar
