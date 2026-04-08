@@ -1,1 +1,8 @@
+<ul class="footer__social-links">
+    {{ range $item := .Site.Params.socialLinks }}
+    <li>
+        <a href="{{ $item.url }}" rel="me" aria-label="{{ $item.title }}" title="{{ $item.title }}">{{ printf "static/icons/%s.svg" $item.icon | readFile | replaceRE "<svg " "<svg class=\"icon\" fill=\"currentColor\" " | safeHTML }}</a>
+    </li>
+    {{ end }}
+</ul>
 <p class="copyright">{{ .Site.Copyright | markdownify }}</p>
