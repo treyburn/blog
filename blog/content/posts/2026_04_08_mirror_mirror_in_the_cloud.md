@@ -80,7 +80,12 @@ in fact - this is the entirety of what you need serve for a basic go module redi
 
 if you serve this `index.html` at the domain/path your go module declares - then you're set!
 
-The `<meta name="go-import" content="..">` piece tell the go toolchain where the source lives and what vcs type to resolve it with. The `<meta name="go-source" content="...">` piece tells the `pkg.go.dev` docs site how to reference your code directly. And the `<meta http-equiv="refresh" content="0; url=...">` piece is just a nice instant redirect to your `pkg.go.dev` docs page if a user ever tries to visit your go module url directly.
+so how does this work?
+> `<meta name="go-import" content="..">` tells the go toolchain where the source lives and what vcs type to resolve it with.
+
+> `<meta name="go-source" content="...">` tells the `pkg.go.dev` docs site how to reference your code directly.
+
+> `<meta http-equiv="refresh" content="0; url=...">` is just an instant redirect to your `pkg.go.dev` docs page (or any other project related page) if a user ever tries to visit your go module url directly.
 
 check out the [official docs on this here](https://go.dev/ref/mod#vcs-find) if you want the know a bit more of the nitty gritty.
 
