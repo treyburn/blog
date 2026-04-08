@@ -104,6 +104,32 @@ blockquote.styled-quote-2 {
     margin: 1.5rem 0;
 }
 
+/* Inline SVG icons (replacing Font Awesome) */
+svg.icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    color: var(--base0D);
+}
+
+.aside__social-links a:hover svg.icon,
+.footer__social-links a:hover svg.icon {
+    color: var(--base0C);
+}
+
+/* Footer social links: hidden by default, shown on small devices */
+.footer__social-links {
+    display: none;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.footer__social-links li {
+    display: inline-block;
+    margin: 0 0.25rem;
+}
+
 /* Hide side section on small devices */
 @media (max-width: 45rem) {
     .page__aside {
@@ -111,5 +137,11 @@ blockquote.styled-quote-2 {
     }
     .footer__lang {
         display: none;
+    }
+    .footer__social-links {
+        display: block;
+    }
+    .copyright {
+        text-align: center;
     }
 }

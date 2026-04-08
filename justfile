@@ -22,3 +22,21 @@ preview:
 
 debug:
     podman run -ti -v .:/src --entrypoint /bin/sh hugo:latest
+
+# Download a Font Awesome icon SVG. Usage: just icon "fa-brands fa-github"
+icon FA_ICON:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    parts=({{FA_ICON}})
+    if [ "${#parts[@]}" -ne 2 ]; then
+        echo "Usage: just icon \"fa-brands fa-github\"" >&2
+        echo "First part: fa-brands, fa-solid, or fa-regular" >&2
+        exit 1
+    fi
+    style="${parts[0]#fa-}"
+    name="${parts[1]#fa-}"
+    url="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/${style}/${name}.svg"
+    dest="blog/static/icons/${name}.svg"
+    echo "Downloading ${url} -> ${dest}"
+    curl -fsSL "${url}" -o "${dest}"
+    echo "Saved ${dest}"

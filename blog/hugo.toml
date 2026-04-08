@@ -36,22 +36,22 @@ logo_image = "images/self.jpg"
 # * Academicons <https://jpswalsh.github.io/academicons> ('ai ai-')
 
 [[params.socialLinks]]
-icon = "fa-brands fa-github"
+icon = "github"
 title = "GitHub"
 url = "https://github.com/treyburn/"
 
 [[params.socialLinks]]
-icon = "fa-brands fa-linkedin"
+icon = "linkedin"
 title = "Linkedin"
 url = "https://www.linkedin.com/in/travis-reyburn"
 
 [[params.socialLinks]]
-icon = "fa-solid fa-paper-plane"
+icon = "paper-plane"
 title = "Email"
 url = "mailto:hey@treyburn.dev"
 
 [[params.socialLinks]]
-icon = "fa-solid fa-rss"
+icon = "rss"
 title = "RSS Feed"
 url = "/posts/index.xml"
 
