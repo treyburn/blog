@@ -65,6 +65,28 @@ so then how does `github.com/some-repo/some-pkg` work? or `go.uber.org/zap` for 
 
 as it turns out - in those cases the go toolchain makes a simple http request to the url with a `?go-get=1` query param added and it expects an html response with some specific `<meta>` tags that direct the go toolchain on where and how to resolve the code.
 
+in fact - this is the entirety of what you need serve for a basic go module redirect including automatic redirection to your `:
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="go-import" content="your.domain.com/your-package git https://github.com/repo/your-package">
+      <meta name="go-source" content="your.domain.com/your-package https://github.com/repo/your-package https://github.com/repo/your-package/tree/main{/dir} https://github.com/repo/your-package/blob/main{/dir}/{file}#L{line}">
+      <meta http-equiv="refresh" content="0; url=https://pkg.go.dev/your.domain.com/your-package">
+    </head>
+</html>
+```
+
+if you serve this `index.html` at the domain/path your go module declares - then you're set!
+
+so how does this work?
+> `<meta name="go-import" content="..">` tells the go toolchain where the source lives and what vcs type to resolve it with.
+
+> `<meta name="go-source" content="...">` tells the `pkg.go.dev` docs site how to reference your code directly.
+
+> `<meta http-equiv="refresh" content="0; url=...">` is just an instant redirect to your `pkg.go.dev` docs page (or any other project related page) if a user ever tries to visit your go module url directly.
+
 check out the [official docs on this here](https://go.dev/ref/mod#vcs-find) if you want the know a bit more of the nitty gritty.
 
 ## lord of my domain
