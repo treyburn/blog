@@ -65,7 +65,7 @@ so then how does `github.com/some-repo/some-pkg` work? or `go.uber.org/zap` for 
 
 as it turns out - in those cases the go toolchain makes a simple http request to the url with a `?go-get=1` query param added and it expects an html response with some specific `<meta>` tags that direct the go toolchain on where and how to resolve the code.
 
-in fact - this is the entirety of what you need serve for a basic go module redirect including automatic redirection to your `:
+in fact - this is the entirety of what you need serve for a basic go module redirect including automatic redirection to your project's documentation.
 ```html
 <!DOCTYPE html>
 <html>
@@ -78,7 +78,7 @@ in fact - this is the entirety of what you need serve for a basic go module redi
 </html>
 ```
 
-if you serve this `index.html` at the domain/path your go module declares - then you're set!
+if you serve this `index.html` at the domain/path your go module declares - then you're all set!
 
 so how does this work?
 > `<meta name="go-import" content="..">` tells the go toolchain where the source lives and what vcs type to resolve it with.
@@ -87,7 +87,7 @@ so how does this work?
 
 > `<meta http-equiv="refresh" content="0; url=...">` is just an instant redirect to your `pkg.go.dev` docs page (or any other project related page) if a user ever tries to visit your go module url directly.
 
-check out the [official docs on this here](https://go.dev/ref/mod#vcs-find) if you want the know a bit more of the nitty gritty.
+check out the [official docs on this here](https://go.dev/ref/mod#vcs-find) if you want the know a bit more of the nitty-gritty.
 
 ## lord of my domain
 static site pages on a custom domain is all that's actually required - [ive done this before](https://treyburn.dev/)!
@@ -112,7 +112,7 @@ spoiler alert: it's just `vanity` for the moment. but i promise im working on mo
 
 at the moment - it's just plain-jane static html with zero styling. eventually i'll get around to extending `vanity` so that i can include my own customization and styling and make it look as snazzy as my blog does.
 
-i think that's all for now. if i've got the energy later then ill do a follow up post on how i actually built this thing.
+i think that's all for now. if i've got the energy later, then ill do a follow-up post on how i actually built this thing.
 
 [^1]: bozeman is an interesting place. it's like an alter ego of fort collins - focused on hunting instead of biking. i kinda love the vibe of the town - don't like the like sprawl or the weird new money vibe that the yellowstone larpers brought from texas.
 [^2]: this isn't even a new phenomenon. i understand that github is seeing a phenomenal increase in traffic with ai tooling. i understand they also started a fraught move off their own infra to azure. but this instability goes back to 2022. idk what happened then - maybe they started moving core systems out of their ruby monolith? but either way - that was the beginning of the decline that we are so used to hitting today. maybe a decentralized system like git was never intended to be so centralized on a platform like github. call me a radical.
