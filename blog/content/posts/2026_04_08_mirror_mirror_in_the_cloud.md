@@ -23,7 +23,7 @@ at least with open source i can fix things, tweak things, migrate, or fork and w
 ## on the microslop conundrum
 enter github. github used to be great - and in a sense it still has its old charms thats kept us there. but its increasingly buggy, unstable, and filled with half-baked ai features[^2].
 
-i'd like to move off it at some point. [codeberg](https://codeberg.org/) and [tangled](https://tangled.org/) both appeal to me. i love the e[thos of codeberg](https://docs.codeberg.org/getting-started/what-is-codeberg/#our-mission) and i am especially interested in [tangled's nix-based ci system](https://blog.tangled.org/ci/). but they both have a pretty major downside to me - neither supports private repos. so what am i to do?
+i'd like to move off it at some point. [codeberg](https://codeberg.org/) and [tangled](https://tangled.org/) both appeal to me. i love the [ethos of codeberg](https://docs.codeberg.org/getting-started/what-is-codeberg/#our-mission) and i am especially interested in [tangled's nix-based ci system](https://blog.tangled.org/ci/). but they both have a pretty major downside to me - neither supports private repos. so what am i to do?
 
 i think my ideal is to self-host my own [forgejo instance](https://codeberg.org/forgejo/forgejo). although i must say that i don't love that they copied github actions as their default ci. i understand why they did it; its a system everybody knows and this makes forgejo a near drop-in replacement for people wanting to migrate off github. but i still think that github actions have gone stale as an idea and gitlabs pipelines were a better system. im hopeful that tangled's spindle may pave the way for lighter, faster, more cache-friendly, deterministic ci. it feels like nix/nixOS has such a compelling use-case here. we shall see!
 
@@ -35,11 +35,11 @@ for a language with centralized package repository - like rust with cargo, or py
 
 go forces you provide your own namespace when you create modules and packages and tools to share. that's pretty neat! you can even host your own proxy and be completely self-reliant with nothing keeping you on google's infra.
 
-the convention when making a go module is to provide the git repo where your code lives. for most of us thats github and our users run `go get github.com/treybrun/my-sweet-code` to share the code we've given to the community. go uses git behind the scenes - so this was the path of least resistance. see the issue?
+the convention when making a go module is to provide the git repo where your code lives. for most of us thats github and our users run `go get github.com/treyburn/my-sweet-code` to share the code we've given to the community. go uses git behind the scenes - so this was the path of least resistance. see the issue?
 
 well - what if i want to move off github? what happens? unfortunately - there's not much you can do if your namespace is your origin. you're more or less forced to [deprecate your code](https://go.dev/ref/mod#go-mod-file-module-deprecation) and provide a new alternative and hope your users follow. breaking dependencies is harmful to users - and i'd like to avoid that.
 
-so what can be done? well - as it turns out - go lets you provide redirects. the first time I encountered this was when I used `zap` - a structured logger by uber. you retrieve their code by running `go get go.uber.org/zap` - yet if you visit [go.uber.org/zap](https://go.uber.org/zap) it redirects you to their [pkg.go.dev](https://pkg.go.dev/go.uber.org/zap) docs page. and in their docs page you can discover that their code actually lives in ... [github](https://github.com/uber-go/zap!
+so what can be done? well - as it turns out - go lets you provide redirects. the first time I encountered this was when I used `zap` - a structured logger by uber. you retrieve their code by running `go get go.uber.org/zap` - yet if you visit [go.uber.org/zap](https://go.uber.org/zap) it redirects you to their [pkg.go.dev](https://pkg.go.dev/go.uber.org/zap) docs page. and in their docs page you can discover that their code actually lives in ... [github](https://github.com/uber-go/zap)!
 
 yet if you run `go get` directly against their github - you get the following error:
 ```shell
@@ -59,7 +59,7 @@ not the most useful error message - but it basically says:
 
 well that's kinda neat. how does this work? earlier i said that go uses git behind the scenes to retrieve the code. that's partially true - but not the whole story. turns out Go actually supports a bunch of difference vcs types including git, mercurial, svn, fossil, and bazaar. 
 
-turns out you can declare your module like this `github.com/some-repo/some-pkg.git` then go will immediately use git to resolve your dep. similarly `gitlab.com/repo/some-pkg.svn` will use `svn` to resolve your dep. and so on and so forth.
+turns out you can declare your module like this `github.com/some-repo/some-pkg.git` then go will immediately use git to resolve your dep. similarly `svn.lol/repo/some-pkg.svn` will use `svn` to resolve your dep. and so on and so forth.
 
 so then how does `github.com/some-repo/some-pkg` work? or `go.uber.org/zap` for that matter? in neither case was it declare that the code is served via git.
 
@@ -114,5 +114,5 @@ at the moment - it's just plain-jane static html with zero styling. eventually i
 
 i think that's all for now. if i've got the energy later, then ill do a follow-up post on how i actually built this thing.
 
-[^1]: bozeman is an interesting place. it's like an alter ego of fort collins - focused on hunting instead of biking. i kinda love the vibe of the town - don't like the like sprawl or the weird new money vibe that the yellowstone larpers brought from texas.
+[^1]: bozeman is an interesting place. it's like an alter ego of fort collins - except culturally focused on hunting instead of biking. i kinda love the vibe of the town - don't like the like sprawl or the weird new money vibe that the yellowstone larpers brought from texas.
 [^2]: this isn't even a new phenomenon. i understand that github is seeing a phenomenal increase in traffic with ai tooling. i understand they also started a fraught move off their own infra to azure. but this instability goes back to 2022. idk what happened then - maybe they started moving core systems out of their ruby monolith? but either way - that was the beginning of the decline that we are so used to hitting today. maybe a decentralized system like git was never intended to be so centralized on a platform like github. call me a radical.
