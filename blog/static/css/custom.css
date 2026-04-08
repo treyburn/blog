@@ -113,19 +113,19 @@ svg.icon {
 }
 
 .aside__social-links a:hover svg.icon,
-.footer__social-links a:hover svg.icon {
+.footer__links a:hover svg.icon {
     color: var(--base0C);
 }
 
 /* Footer social links: hidden by default, shown on small devices */
-.footer__social-links {
+.footer__links {
     display: none;
     padding: 0;
     list-style: none;
     text-align: center;
 }
 
-.footer__social-links li {
+.footer__links li {
     display: inline-block;
     margin: 0 0.25rem;
 }
@@ -138,7 +138,7 @@ svg.icon {
     .footer__lang {
         display: none;
     }
-    .footer__social-links {
+    .footer__links {
         display: block;
     }
     .copyright {
