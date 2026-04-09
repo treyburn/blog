@@ -55,6 +55,11 @@ icon = "rss"
 title = "RSS Feed"
 url = "/posts/index.xml"
 
+[[params.socialLinks]]
+icon = "bluesky"
+title = "Bluesky"
+url = "https://bsky.app/profile/treyburn.dev"
+
 [languages]
     [languages.en]
         disabled = false
