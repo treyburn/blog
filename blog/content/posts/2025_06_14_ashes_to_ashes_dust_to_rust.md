@@ -2,6 +2,7 @@
 date = '2025-06-14' # date of publication
 author = 'Travis Reyburn'
 title = 'A Go Developer Learns Rust' # official title of the post
+shortName = 'rust-1'
 displayTitle = 'ashes to ashes dust to rust' # display title in content
 displayLanguage = 'rust'
 subtitle = 'the beginnings of my journey to properly learn rust' # subtitle used for display and content

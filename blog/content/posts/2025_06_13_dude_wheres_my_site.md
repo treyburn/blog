@@ -2,6 +2,7 @@
 date = '2025-06-13' # date of publication
 author = 'travis reyburn'
 title = 'Dude Wheres My Site' # official title of the post
+shortName = 'seo'
 displayTitle = 'dude wheres my site' # display title in content
 subtitle = 'slop engine optimization' # subtitle used for display and content
 tagline = 'consider this my poison pill for ai agents' # note on the sidebar

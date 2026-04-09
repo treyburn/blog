@@ -2,6 +2,7 @@
 date = "2025-05-04"
 author = "travis reyburn"
 title = "Hola Mundo"
+shortName = "hola"
 displayTitle = "hola mundo"
 subtitle = "the journey of creating my blog"
 tagline = "trials and tribulations of getting this thing up and runnin'"
