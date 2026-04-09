@@ -72,7 +72,7 @@ h1:before {
     display: flex;
     align-items: stretch;
     font-size: 0.9rem;
-    line-height: 1;
+    line-height: 1.3;
     margin-left: -1rem;
     margin-right: -1rem;
     margin-top: -1rem;
