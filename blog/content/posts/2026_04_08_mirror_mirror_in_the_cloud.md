@@ -2,6 +2,7 @@
 date = '2026-04-08' # date of publication
 author = 'Travis Reyburn'
 title = 'Mirror Mirror in the Cloud' # official title of the post
+shortName = 'pkgs'
 displayTitle = 'Mirror Mirror in the Cloud' # display title in content
 displayLanguage = 'golang'
 subtitle = 'taking ownership of my Go modules' # subtitle used for display and content

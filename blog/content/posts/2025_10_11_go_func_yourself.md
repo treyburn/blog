@@ -3,6 +3,7 @@ date = '2025-10-11' # date of publication
 draft = false # set to false or remove to publish
 author = 'Travis Reyburn'
 title = 'Go Func Yourself' # official title of the post
+shortName = 'go-func'
 displayTitle = 'go func yourself' # display title in content
 displayLanguage = 'golang'
 subtitle = 'all the rough edges ive gotten splinters from' # subtitle used for display and content

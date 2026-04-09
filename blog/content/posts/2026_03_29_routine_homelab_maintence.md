@@ -2,6 +2,7 @@
 date = '2026-03-23' # date of publication
 author = 'Travis Reyburn'
 title = 'Routine Homelab Maintence' # official title of the post
+shortName = 'homelab'
 displayTitle = 'Routine Homelab Maintence' # display title in content
 displayLanguage = 'dorklang'
 subtitle = 'theres no place like 192.168.50.255' # subtitle used for display and content

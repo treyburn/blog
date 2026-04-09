@@ -3,6 +3,7 @@ date = '2025-10-04' # date of publication
 draft = false # set to false or remove to publish
 author = 'Travis Reyburn'
 title = 'Ground Control to Major Tom' # official title of the post
+shortName = 'ankle'
 displayTitle = 'ground control to major tom' # display title in content
 subtitle = 'a retro on injury and grief' # subtitle used for display and content
 tagline = 'dont break a leg, kids' # note on the sidebar

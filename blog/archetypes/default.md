@@ -4,6 +4,7 @@ draft = true # set to false or remove to publish
 author = 'Travis Reyburn'
 title = '{{ replace (substr .File.ContentBaseName 11) "_" " " | title }}' # official title of the post
 displayTitle = '{{ replace (substr .File.ContentBaseName 11) "_" " " | title }}' # display title in content
+shortName = '' # short name for nav dropdown
 displayLanguage = ''
 subtitle = '' # subtitle used for display and content
 tagline = '' # note on the sidebar

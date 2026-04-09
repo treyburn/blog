@@ -3,6 +3,7 @@ date = "2025-06-03"
 draft = true
 author = "travis reyburn"
 title = "Birthday Reflections"
+shortName = "birthday"
 displayTitle = "yet another orbit completed"
 subtitle = "my quiet sadness for birthdays"
 tagline = "sorry for the downer;\nenjoy the cake"
