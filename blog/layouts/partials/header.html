@@ -1,10 +1,29 @@
-<nav class="page__nav main-nav">
-    <ul>
-      <li class="nomarker"><h2 class="page__logo"><a href="{{ .Site.BaseURL }}" class="page__logo-inner">{{ .Site.Title }}</a></h2></li>
-    {{ $currentPage := . }}
-    {{ range .Site.Menus.main }}
-    <li class="main-nav__item"><a class="nav-main-item{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) (eq ($currentPage.Permalink) (.URL | absLangURL)) }} active{{end}}" href="{{ .URL | absLangURL }}" title="{{ .Title }}">{{ .Name }}</a></li>
-    {{ end }}
-    </ul>
+<nav class="p10k-nav">
+  <a href="{{ .Site.BaseURL }}" class="p10k-seg p10k-path">~/treyburn/blog</a>
+  <span class="p10k-arrow-r" style="--from:var(--p10k-path);--to:var(--p10k-branch)"></span>
+  <a href="{{ .Site.BaseURL }}" class="p10k-seg p10k-branch">
+    <svg class="p10k-branch-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
+    main
+  </a>
+  <span class="p10k-arrow-r" style="--from:var(--p10k-branch);--to:transparent"></span>
+  <span class="p10k-dots"></span>
+  <span class="p10k-arrow-l" style="--from:var(--p10k-select-bg);--to:transparent"></span>
+  <div class="p10k-seg p10k-select-seg">
+    <select class="p10k-select" onchange="window.location.href=this.value">
+      {{ $current := . }}
+      {{ $isChild := true }}
+      {{ if .IsHome }}{{ $isChild = false }}{{ end }}
+      {{ range .Site.Menus.main }}
+        {{ if or ($current.IsMenuCurrent "main" .) (eq ($current.Permalink) (.URL | absLangURL)) }}{{ $isChild = false }}{{ end }}
+      {{ end }}
+      {{ if $isChild }}
+      <option value="" disabled selected>{{ with .Params.shortName }}{{ . }}{{ else }}...{{ end }}</option>
+      {{ end }}
+      <option value="{{ .Site.BaseURL }}" {{ if .IsHome }}selected{{ end }}>home</option>
+      {{ range .Site.Menus.main }}
+      <option value="{{ .URL | absLangURL }}"
+        {{ if or ($current.IsMenuCurrent "main" .) (eq ($current.Permalink) (.URL | absLangURL)) }}selected{{ end }}>{{ .Name }}</option>
+      {{ end }}
+    </select>
+  </div>
 </nav>
-
