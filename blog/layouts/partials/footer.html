@@ -5,4 +5,5 @@
     </li>
     {{ end }}
 </ul>
-<p class="copyright">{{ .Site.Copyright | markdownify }}</p>
+{{ $emoji := index (shuffle (slice "🚴" "🚵" "⛷️" "🏕️" "🧗" "☕️" "🍺" "🌲" "🏔️" "🥘" "🌯" "🍕" "🍣" "🐈‍⬛")) 0 -}}
+<p class="copyright">made with {{ $emoji }} in boulder, co</p>
