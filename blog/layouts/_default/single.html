@@ -18,7 +18,16 @@
     <div class="content__body">
         {{ .Content }}
     </div>
-    <footer class="content__footer"></footer>
+    <footer class="content__footer">
+        {{ if eq .Section "posts" }}
+        <nav class="content__back">
+            <a href="{{ .Section | absURL }}" class="back-btn">
+                <span class="back-btn__arrow"></span>
+                <span class="back-btn__label">cd ..</span>
+            </a>
+        </nav>
+        {{ end }}
+    </footer>
 {{ end }}
 
 {{define "aside" }}
