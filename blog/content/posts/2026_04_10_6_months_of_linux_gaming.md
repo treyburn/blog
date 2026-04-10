@@ -15,27 +15,27 @@ keywords = ["linux", "gaming", "windows"] # seo keywords
 +++
 
 ## 3 score...
-i've been a pc gamer since i was knee-high to a grasshopper. my dad was an OG dork; one of the first remote tech workers - from 1993 on - out in the boonies of cornlandia. ran his own little 2 man startup for a bit. in retrospect - mad respect.
+i've been a pc gamer since i was knee-high to a grasshopper. my dad was an OG dork; one of the first remote tech workers - back in 1993 out in the boonies of cornlandia. and ran his own little 2 man startup for a bit. in retrospect - mad respect.
 
-because of that semi-privileged upbringing, we always had a computer and an internet connection. and i've realized as an adult - that we got this way earlier than most kids. especially the other kids in cornlandia. it's probably why im a software dev today.
+because of that semi-privileged upbringing, we always had a computer and an internet connection. and i've realized as an adult that we got this way earlier than most 90s kids. especially the other kids in cornlandia. it's probably why im a software dev today.
 
 anyways - i remember my first game. my dad and i were getting ... whatever it is you used to have to get from staples in the 90s - and i saw it. [mech warrior 2](https://en.wikipedia.org/wiki/MechWarrior_2:_31st_Century_Combat). i had to have it. my dad had to have it. we got it and bailed on whatever it was we were supposed to be buying and went straight home.
 
-we threw it on my dads ms-dos machine and away we went. 3d graphics! just roaming around this .... most empty sand world shooting tiny specs of mech we could barely see. and it was glorious. i was hooked.
+we threw it on my dads ms-dos machine and away we went. 3d graphics! just roaming around this .... mostly empty sand world - shooting tiny specs of mech we could barely see. and it was glorious. i was hooked.
 
 a few months later - i entered kindergarten and met my fellow nerds. one of them had a dad that worked as a sysadmin - so they had a 3 family computers, a lan network, and warcraft 2. holy moly - that was it. i was a true pc gamer from then on.
 
 ## ...and 6 months ago
 like all pc gamers - i've been gaming on windows my whole life. from ms-dos to windows 11. it was old reliable - until it wasn't.
 
-i'm not gonna dive to deep into my gripes with windows - so ill just leave it as:
+i'm not gonna dive into my gripes with windows - so ill just leave it as this:
 
 > what the actual fuck have you done, satya? how have y'all enshitified a freaking operating system this hard this fast. just what the greedy fuck!
 {.styled-quote}
 
-btw - if you're still suck on windows then [take this debloat script and breath easier](https://github.com/raphire/win11debloat).
+btw - if you're still stuck on windows then [take this debloat script and breath easier](https://github.com/raphire/win11debloat).
 
-i used that debloat script personally for ages. i still use it on my wife's machine. it's safe, it works, and i vouch for it. you'll need to run it after every update - but just consider that the microslop tax.
+i used that debloat script personally for ages. i still use it on my wife's machine. it's safe, it works, and i vouch for it. you'll need to re-run it after every windows update - but just consider that the microslop tax.
 
 anyways - 6 months ago i decided that enough was enough. i dont even know what the straw that broke the camel’s back was. all i know is i was *so over it*.
 
@@ -77,15 +77,15 @@ anyways - this is the full list - judge away!
 * [case of the golden idol](https://store.steampowered.com/app/1677770/The_Case_of_the_Golden_Idol/)
 
 ## the good, the bad, the ugly
-that's a lot of games - surely must have been a lot of effort tweaking configs to get them to run, right? nope. literally no effort beyond clicking install and running.
+that's a lot of games - surely it must have been a lot of effort tweaking configs to get them to run, right? nope. literally no effort beyond clicking install and running.
 
 i've had exactly 1 issue and 1 gripe during my six months and many games.
-1. gripe: it was annoying to get 1password installed. they didn't have it on flathub at the time - [but it's there now](https://flathub.org/en/apps/com.onepassword.OnePassword). so this was more of a minor annoyance with how to install software outside the blessed path. but even then - it just involved a simple cli command. that might be a barrier for some - but i literally only to install this program like that. everything has had flathub support for casual/gaming oriented software. stuff like slack, discord, spotify, brave browser, steam, heroic, etc - all that is in flathub.
-2. issue: one of the nvidia driver updates that came with a bazzite system update made stalker 2 unstable. this was annoying to track down but once i figured out why my game was randomly crashing - it was as simple as figuring out which version last worked, then running `brh list` to get the target value and `brh rollback <target>`. that was it! back to working. every so ofter i'd try to update, see it was still broken, and rollback again. eventually a new driver shipped that fixed it and that was it.
+1. gripe: it was annoying to get 1password installed. they didn't have it on flathub at the time - [but it's there now](https://flathub.org/en/apps/com.onepassword.OnePassword). so this was more of a minor annoyance with how to install software outside the blessed path. but even then - it just involved a simple cli command. that might be a barrier for some - but i literally only to install 1password like that. everything else has had flathub support. the casual/gaming oriented software - stuff like slack, discord, spotify, brave browser, steam, heroic, etc - all that is in flathub.
+2. issue: one of the nvidia driver updates that came with a bazzite system update made stalker 2 unstable. this was annoying to track down but once i figured out why my game was randomly crashing - it was as simple as figuring out which version last worked, then running `brh list` to get the target value and `brh rollback <target>`. that was it! back to working. every so often i'd try to update, see it was still broken, and rollback again. eventually a new driver shipped that fixed it and that was it.
 
 point number 2 i listed as an issue. and it was. but it's also kind of a huge selling point of bazzite. what if my game was broken on windows like that? have you ever tried to rollback windows or an nvidia driver on windows? it's fucking miserable. i am totally sold on the immutable, container-based os approach with bazzite/bootc/fedora-atomic. for an "appliance" os (which i consider gaming to be a form of) - i cannot possibly imagine a better setup[^3].
 
-you're probably wondering if i've had any issues with the desktop ux? nope. kde plasma is actually pretty slick. the window tiling could maybe be a bit more intuitive - but otherwise it feels like a better windows desktop environment. seriously. the start menu in particular is so good. i wouldn't recommend something like cosmic desktop to casual users - theres still lots of rough edges here. but kde plasma is great - a real no-brainer to use and will just feel familiar to the less tech-savvy.
+you're probably wondering if i've had any issues with the desktop ux? nope. kde plasma is actually pretty slick. the window tiling could maybe be a bit more intuitive - but otherwise it feels like a better windows desktop environment. seriously. the start menu in particular is so good. i wouldn't recommend something like cosmic desktop to casual users - theres still lots of rough edges there. but kde plasma is great - a real no-brainer to use and will just feel familiar to the less tech-savvy.
 
 ok but what about peripherals? we've all heard linux is terrible with peripherals. and maybe it was once - but this truly hasn't been my experience. i've got the following:
 * bog standard mouse and keyboard: no issues. 
@@ -99,7 +99,7 @@ ok but what about peripherals? we've all heard linux is terrible with peripheral
 
 i want to really drive this point home - every device i've connected has just worked out-of-the-box. on bazzite and pop!_os alike. that literally hasn't been the case on windows. my wifi7 antenna didn't work on windows. i had to use another computer to download a driver and throw it on a flash drive for windows because it wouldn't work. what if i didn't have another machine to do this with? ugh windows wtf.
 
-literally less stuff works out-of-the-box on windows than linux has been my lived experience over the past year. we've been lied to!
+literally less stuff works out-of-the-box on windows than on linux - that has been my lived experience over the past year+. we've been lied to!
 
 ## over and out
 so what's next?
