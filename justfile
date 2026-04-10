@@ -20,6 +20,10 @@ serve:
 preview:
     podman run --rm -p 1313:1313 -v .:/src -w /src/blog hugo:latest serve --minify --bind=0.0.0.0
 
+# Optimize images in blog/static/images. Lossy for JPEGs, lossless for PNGs.
+optimize:
+    podman run --rm -v .:/src --entrypoint /bin/sh hugo:latest -c "jpegoptim --strip-all --max=95 /src/blog/static/images/*.jpg && optipng -o5 /src/blog/static/images/*.png"
+
 debug:
     podman run -ti -v .:/src --entrypoint /bin/sh hugo:latest
 
