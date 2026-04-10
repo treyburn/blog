@@ -1,6 +1,5 @@
 +++
 date = '2026-04-10' # date of publication
-draft = true # set to false or remove to publish
 author = 'Travis Reyburn'
 title = 'New Navbar, Who Dis?' # official title of the post
 displayTitle = 'New Navbar Who Dis' # display title in content
