@@ -1,0 +1,342 @@
+html {
+    background-color: var(--bg);
+    scrollbar-gutter: stable;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+:root {
+    --logo: #7c589e;
+    text-transform: lowercase; /* no gods no masters */
+}
+
+.footnote-ref {
+    font-size: 12px;
+}
+
+.upper {
+    text-transform: uppercase; /* chaos reigns */
+}
+
+h1:before { content: "$ "; }
+h2:before { content: "# "; }
+h3:before { content: "## "; }
+h4:before { content: "### "; }
+h5:before { content: "#### "; }
+h6:before { content: "##### "; }
+
+h1:before {
+    color: var(--base0B);
+}
+
+.date {
+    font-size: 16px;
+}
+
+.page {
+    min-height: calc(100vh - 1rem);
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 1rem 1rem 0;
+    grid-template-rows: auto 1fr auto auto;
+    grid-row-gap: 1rem;
+}
+
+.page__body {
+    min-height: 0;
+    align-self: start;
+}
+
+.page__footer {
+    padding-top: 2rem;
+}
+
+/* ===== P10k Navigation ===== */
+:root {
+    --p10k-path: #7c589e;
+    --p10k-branch: #394b70;
+    --p10k-select-bg: var(--base0F);
+    --p10k-fg: var(--base08);
+    --p10k-arrow-w: 0.7rem;
+    --p10k-dot: #3b4261;
+}
+
+.page__header {
+    display: block;
+}
+
+.p10k-nav {
+    display: flex;
+    align-items: stretch;
+    font-size: 0.9rem;
+    line-height: 1.3;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    margin-top: -1rem;
+}
+
+@media (min-width: 45rem) {
+    .p10k-nav {
+        /* Pull back from the aside column (15rem) + grid gap (2rem), minus page padding (1rem) */
+        margin-right: calc(15rem + 2rem - 1rem);
+    }
+}
+
+.p10k-seg {
+    display: flex;
+    align-items: center;
+    padding: 0.45rem 0.75rem;
+    color: var(--p10k-fg);
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+a.p10k-seg:link,
+a.p10k-seg:visited {
+    color: var(--p10k-fg);
+    text-decoration: none;
+}
+
+a.p10k-seg:hover,
+a.p10k-seg:active {
+    background: color-mix(in srgb, var(--seg-bg) 75%, black);
+}
+
+.p10k-path {
+    --seg-bg: var(--p10k-path);
+    background: var(--seg-bg);
+}
+
+.p10k-branch {
+    --seg-bg: var(--p10k-branch);
+    background: var(--seg-bg);
+}
+
+.p10k-select-seg {
+    background: var(--p10k-select-bg);
+    position: relative;
+}
+
+.p10k-select-seg:hover {
+    background: color-mix(in srgb, var(--p10k-select-bg) 75%, black);
+}
+
+/* Right-pointing powerline arrow */
+.p10k-arrow-r {
+    position: relative;
+    width: var(--p10k-arrow-w);
+    flex-shrink: 0;
+    background: var(--to);
+    margin-left: -0.25px;
+}
+
+.p10k-arrow-r::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--from);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+/* Left-pointing powerline arrow */
+.p10k-arrow-l {
+    position: relative;
+    width: var(--p10k-arrow-w);
+    flex-shrink: 0;
+    background: var(--to);
+    margin-right: -0.25px;
+}
+
+.p10k-arrow-l::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--from);
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+/* Spacer — pushes the dropdown to the right */
+.p10k-dots {
+    flex: 1 1 0;
+    min-width: 0;
+    background-image: radial-gradient(circle, var(--p10k-dot) 2px, transparent 2px);
+    background-size: 0.75rem 100%;
+    background-repeat: repeat-x;
+    background-position: left center;
+}
+
+/* Branch icon */
+.p10k-branch-icon {
+    width: 0.9em;
+    height: 0.9em;
+    margin-right: 0.3em;
+    flex-shrink: 0;
+}
+
+/* Select dropdown */
+.p10k-select {
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    color: var(--p10k-fg);
+    border: none;
+    font: inherit;
+    font-size: 0.9rem;
+    text-transform: lowercase;
+    cursor: pointer;
+    padding: 0;
+    padding-right: 1.2rem;
+    outline: none;
+}
+
+.p10k-select-seg::after {
+    content: '▾';
+    position: absolute;
+    right: 0.4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--p10k-fg);
+    pointer-events: none;
+    font-size: 1.5em;
+}
+
+.p10k-select option {
+    background: var(--bg);
+    color: var(--fg);
+}
+
+/* Back button on post pages — p10k styled */
+.content__back {
+    margin-top: 2rem;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: stretch;
+    text-decoration: none;
+    font-size: 0.9rem;
+    line-height: 1;
+}
+
+.back-btn__arrow {
+    position: relative;
+    width: var(--p10k-arrow-w);
+    flex-shrink: 0;
+}
+
+.back-btn__arrow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--p10k-path);
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+.back-btn__label {
+    display: flex;
+    align-items: center;
+    padding: 0.4rem 0.75rem;
+    background: var(--p10k-path);
+    color: var(--p10k-fg);
+    font-weight: 600;
+}
+
+.back-btn:hover .back-btn__label {
+    background: color-mix(in srgb, var(--p10k-path) 75%, black);
+}
+
+.back-btn:hover .back-btn__arrow::before {
+    background: color-mix(in srgb, var(--p10k-path) 75%, black);
+}
+
+/* make image round and capped at 240px*/
+.about__image {
+    width: 240px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.about__description {
+    font-weight: normal;
+}
+
+/* Let Chroma inline syntax highlighting colors take precedence over risotto defaults */
+.highlight pre code {
+    color: inherit;
+}
+.highlight span {
+    color: inherit;
+}
+
+/* Preserve original casing in code blocks */
+pre,
+code {
+    text-transform: none;
+}
+
+/* Inline code styling */
+:not(pre) > code {
+    color: var(--base0E);
+}
+
+/* Blockquote styling - opt-in via {.styled-quote} attribute in markdown */
+blockquote.styled-quote {
+    background-color: var(--inner-bg);
+    border-left: 4px solid var(--base0D);
+    padding: 0 0.5rem;
+    margin: 1.5rem 0;
+}
+
+/* Additional custom blockquote styling - useful if there's a conversation going on */
+blockquote.styled-quote-2 {
+    background-color: var(--inner-bg);
+    border-left: 4px solid var(--base0B);
+    padding: 0 0.5rem;
+    margin: 1.5rem 0;
+}
+
+/* Inline SVG icons (replacing Font Awesome) */
+svg.icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    color: var(--base0D);
+}
+
+.aside__social-links a:hover svg.icon,
+.footer__links a:hover svg.icon {
+    color: var(--base0C);
+}
+
+/* Footer social links: hidden by default, shown on small devices */
+.footer__links {
+    display: none;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.footer__links li {
+    display: inline-block;
+    margin: 0 0.25rem;
+}
+
+/* Hide side section on small devices */
+@media (max-width: 45rem) {
+    .page__aside {
+        display: none;
+    }
+    .footer__lang {
+        display: none;
+    }
+    .footer__links {
+        display: block;
+    }
+    .copyright {
+        text-align: center;
+    }
+}
