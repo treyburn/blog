@@ -22,11 +22,21 @@ body {
 }
 
 h1:before { content: "$ "; }
-h2:before { content: "# "; }
-h3:before { content: "## "; }
-h4:before { content: "### "; }
-h5:before { content: "#### "; }
-h6:before { content: "##### "; }
+
+/* Remove theme h2-h6 ::before prefixes — now handled by render-heading.html */
+h2:before, h3:before, h4:before, h5:before, h6:before { content: none; }
+
+/* Heading anchor links */
+.heading-anchor,
+.heading-anchor:link,
+.heading-anchor:visited {
+    text-decoration: none;
+    color: var(--muted);
+}
+
+.heading-anchor:hover {
+    color: var(--base0D);
+}
 
 h1:before {
     color: var(--base0B);
