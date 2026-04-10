@@ -18,7 +18,7 @@ keywords = ["claude", "p10k", "terminal aesthetic"] # seo keywords
 
 you're gonna want to sit down for this...
 
-i've got a new nav bar.
+☝️ i've got a new navbar. ☝️
 
 and it looks like my [p10k zsh theme](https://github.com/romkatv/powerlevel10k). i've dreamt of this for ages. but just today asked claude to do it for me. it took like 10 minutes. lol.
 
