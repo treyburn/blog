@@ -14,16 +14,26 @@
 
 
 <!-- risotto theme -->
-<link rel="stylesheet" href="{{ printf "css/palettes/%s.css" (.Site.Params.theme.palette | default "base16-dark") | absURL }}">
-<link rel="stylesheet" href="{{ "css/colours.css" | absURL }}">
-<link rel="stylesheet" href="{{ "css/typography.css" | absURL }}">
-<link rel="stylesheet" href="{{ "css/layout.css" | absURL }}">
-<link rel="stylesheet" href="{{ "css/header.css" | absURL }}">
-<link rel="stylesheet" href="{{ "css/logo.css" | absURL }}">
-<link rel="stylesheet" href="{{ "css/about.css" | absURL }}">
-<link rel="stylesheet" href="{{ "css/footer.css" | absURL }}">
-<link rel="stylesheet" href="{{ "css/risotto.css" | absURL }}">
-<link rel="stylesheet" href="{{ "css/custom.css" | absURL }}">
+{{ $palette := resources.Get (printf "css/palettes/%s.css" (.Site.Params.theme.palette | default "base16-dark")) | minify }}
+<link rel="stylesheet" href="{{ $palette.RelPermalink }}">
+{{ $colours := resources.Get "css/colours.css" | minify }}
+<link rel="stylesheet" href="{{ $colours.RelPermalink }}">
+{{ $typography := resources.Get "css/typography.css" | minify }}
+<link rel="stylesheet" href="{{ $typography.RelPermalink }}">
+{{ $layout := resources.Get "css/layout.css" | minify }}
+<link rel="stylesheet" href="{{ $layout.RelPermalink }}">
+{{ $header := resources.Get "css/header.css" | minify }}
+<link rel="stylesheet" href="{{ $header.RelPermalink }}">
+{{ $logo := resources.Get "css/logo.css" | minify }}
+<link rel="stylesheet" href="{{ $logo.RelPermalink }}">
+{{ $about := resources.Get "css/about.css" | minify }}
+<link rel="stylesheet" href="{{ $about.RelPermalink }}">
+{{ $footer := resources.Get "css/footer.css" | minify }}
+<link rel="stylesheet" href="{{ $footer.RelPermalink }}">
+{{ $risotto := resources.Get "css/risotto.css" | minify }}
+<link rel="stylesheet" href="{{ $risotto.RelPermalink }}">
+{{ $custom := resources.Get "css/custom.css" | minify }}
+<link rel="stylesheet" href="{{ $custom.RelPermalink }}">
 
 <!-- favicon -->
 {{ if os.FileExists "static/favicon.ico" }}<link rel="icon" href="{{ "favicon.ico" | absURL }}">{{ end }}
