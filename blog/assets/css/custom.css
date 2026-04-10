@@ -301,12 +301,20 @@ blockquote.styled-quote {
     margin: 1.5rem 0;
 }
 
+blockquote.styled-quote::before {
+    content: none;
+}
+
 /* Additional custom blockquote styling - useful if there's a conversation going on */
 blockquote.styled-quote-2 {
     background-color: var(--inner-bg);
     border-left: 4px solid var(--base0B);
     padding: 0 0.5rem;
     margin: 1.5rem 0;
+}
+
+blockquote.styled-quote-2::before {
+    content: none;
 }
 
 /* Inline SVG icons (replacing Font Awesome) */
