@@ -3,7 +3,7 @@
     <h1>pwd</h1>
   </header>
   <p>/travis/mind/welcome</p>
-  <h2>latest posts</h2>
+  <h2 id="latest-posts"><a class="heading-anchor" href="#latest-posts">#</a> latest posts</h2>
   <div class="content__body">
       <ul>
         {{ range first 5 (where .Site.RegularPages "Type" "posts") }}
