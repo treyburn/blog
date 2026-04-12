@@ -236,6 +236,7 @@ a.p10k-seg:active {
     position: relative;
     width: var(--p10k-arrow-w);
     flex-shrink: 0;
+    margin-right: -0.25px;
 }
 
 .back-btn__arrow::before {
