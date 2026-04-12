@@ -219,6 +219,31 @@ a.p10k-seg:active {
     color: var(--fg);
 }
 
+/* Branch dropdown (no arrow) */
+.p10k-branch-dropdown {
+    position: relative;
+}
+
+.p10k-branch-select {
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    color: var(--p10k-fg);
+    border: none;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: lowercase;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+}
+
+.p10k-branch-select option {
+    background: var(--bg);
+    color: var(--fg);
+}
+
 /* Back button on post pages — p10k styled */
 .content__back {
     margin-top: 2rem;
