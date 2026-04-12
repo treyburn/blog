@@ -222,6 +222,11 @@ a.p10k-seg:active {
 /* Branch dropdown (no arrow) */
 .p10k-branch-dropdown {
     position: relative;
+    cursor: pointer;
+}
+
+.p10k-branch-dropdown:hover {
+    background: color-mix(in srgb, var(--seg-bg) 75%, black);
 }
 
 .p10k-branch-select {
