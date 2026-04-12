@@ -1,10 +1,13 @@
 <nav class="p10k-nav">
   <a href="{{ .Site.BaseURL }}" class="p10k-seg p10k-path">~/treyburn/blog</a>
   <span class="p10k-arrow-r" style="--from:var(--p10k-path);--to:var(--p10k-branch)"></span>
-  <a href="{{ .Site.BaseURL }}" class="p10k-seg p10k-branch">
+  <div class="p10k-seg p10k-branch p10k-branch-dropdown">
     <svg class="p10k-branch-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
-    main
-  </a>
+    <select class="p10k-branch-select" onchange="window.location.href=this.value">
+      <option value="{{ .Site.BaseURL }}" selected>main</option>
+      <option value="https://go.treyburn.dev/">pkgs</option>
+    </select>
+  </div>
   <span class="p10k-arrow-r" style="--from:var(--p10k-branch);--to:transparent"></span>
   <span class="p10k-dots"></span>
   <span class="p10k-arrow-l" style="--from:var(--p10k-select-bg);--to:transparent"></span>
@@ -27,3 +30,8 @@
     </select>
   </div>
 </nav>
+<script>
+window.addEventListener('pageshow', function() {
+  document.querySelector('.p10k-branch-select').selectedIndex = 0;
+});
+</script>
