@@ -32,13 +32,13 @@ i took a pay cut to join my current company. in retrospect, it was a dumb decisi
 
 but now? same as everywhere else - management here is engorged in the ai feeding frenzy. very rapidly our work-life balance has degraded. despite this company having doubled revenue since i joined - without nearly any budging in headcount. yet that still isn't enough.
 
-our head of HR told us in an all hands that she believes we can achieve (and by that implication - wants to see) a doubling/tripling/quadrupling/and more of productivity. this isn't just a fever dream - this is a thinly veiled threat.
+in an all hands they announced that they believe we can achieve (and by that implication - wants to see) a doubling/tripling/quadrupling/and more of productivity. this isn't just a fever dream - this is a thinly veiled threat.
 
 and i can tell my coworkers feel threatened by it too. not just because they've directly told me so - but because everybody feels the need to work at 150% effort all day every day with these machines. it's impossible to keep up.
 
-meanwhile hr has been slowly scaling back our benefits and culture that once made this place so unique and special. really just boiling us frogs. 
+meanwhile they've been slowly scaling back our benefits and culture that once made this place so unique and special. really just boiling us frogs. 
 
-we used to have a ton of floating holidays in lieu of official holidays off. but it was a quiet secret that managers let us take those official holidays off without spending the floating pto as a reward for our hard work. we used to have an annual company-wide retreat. then it was every year and a half (once) and now it's just gone. we used to have a week-long hackathon in engineering to build our dreams. now? hr doesn't want to see us engineers empowered to build our dream features in our beloved product - they just want us building more ai tooling. as if that's not what we do all day every day. ugh!
+we used to have a ton of floating holidays in lieu of official holidays off. that flexibility was clutch for taking more trips throughout the year. we used to have an annual company-wide retreat. then it was every year and a half (once) and now it's just gone. we used to have a week-long hackathon in engineering to build our dreams. now? they don't want to see us engineers empowered to build our dream features in our beloved product - they just want us building more ai tooling. as if that's not what we do all day every day. ugh!
 
 so what's the point anymore? ai has just sucked the fun out of the room - and im getting paid less!
 
