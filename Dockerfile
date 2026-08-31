@@ -1,13 +1,9 @@
-FROM docker.io/golang:1.24.2-alpine
+# Official Hugo image (Alpine-based, extended build with dart-sass).
+# Tags: https://github.com/gohugoio/hugo/pkgs/container/hugo
+FROM ghcr.io/gohugoio/hugo:v0.165.0
 
-ENV HUGO_VERSION=0.159.0-r0
-
-# Prerequirements
-RUN apk add --update --no-cache gcc musl-dev build-base git jpegoptim optipng
-
-# Compile from source
-RUN apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community hugo=${HUGO_VERSION}
-
-WORKDIR /src
-
-ENTRYPOINT ["hugo"]
+# Image tooling beyond what Hugo ships. Root only for the install; the base
+# image's non-root `hugo` user is restored below.
+USER root
+RUN apk add --no-cache jpegoptim optipng gifsicle
+USER hugo
